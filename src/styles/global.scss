@@ -1,3 +1,54 @@
 @charset "utf-8";
 @import "~bulma";
 @import "./__variables.scss";
+
+@for $i from 0 through 7 {
+  // Margin and padding
+  .m-#{$i},
+  .mx-#{$i},
+  .mr-#{$i} {
+    margin-right: $spacer * $i !important;
+  }
+
+  .m-#{$i},
+  .mx-#{$i},
+  .ml-#{$i} {
+    margin-left: $spacer * $i !important;
+  }
+
+  .m-#{$i},
+  .my-#{$i},
+  .mt-#{$i} {
+    margin-top: $spacer * $i !important;
+  }
+
+  .m-#{$i},
+  .my-#{$i},
+  .mb-#{$i} {
+    margin-bottom: $spacer * $i !important;
+  }
+
+  .p-#{$i},
+  .px-#{$i},
+  .pr-#{$i} {
+    padding-right: $spacer * $i !important;
+  }
+
+  .p-#{$i},
+  .px-#{$i},
+  .pl-#{$i} {
+    padding-left: $spacer * $i !important;
+  }
+
+  .p-#{$i},
+  .py-#{$i},
+  .pt-#{$i} {
+    padding-top: $spacer * $i !important;
+  }
+
+  .p-#{$i},
+  .py-#{$i},
+  .pb-#{$i} {
+    padding-bottom: $spacer * $i !important;
+  }
+}
