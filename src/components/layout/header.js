@@ -11,12 +11,16 @@ const Header = ({ siteTitle }) => (
     className="has-background-light"
     role="navigation"
     aria-label="main navigation"
+    style={{ position: "fixed", width: "100%", top: 0 }}
   >
-    <div className="columns is-centered pt-1">
+    <div className="columns is-centered py-1">
       <div className="column is-12-mobile is-10-tablet is-8-desktop">
         <div className="columns is-mobile is-vcentered">
           <div className="column">
             <div className="ml-1 has-text-weight-bold">
+              {/* <span className="icon">
+                <Icon />
+              </span> */}
               <Link to="/">{siteTitle}</Link>
             </div>
           </div>

@@ -1,16 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout/layout"
+import SEO from "../components/layout/seo"
+import Container from "../components/layout/container"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Container>
+      <h1 className="title is-size-2 has-text-centered">
+        Hanggang saan aabot ang
+        <br />
+        <span className="has-text-danger">8.2 billion pesos</span> mo?
+      </h1>
+    </Container>
   </Layout>
 )
 

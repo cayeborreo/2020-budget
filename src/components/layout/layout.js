@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Container from "./container"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,14 +26,15 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="columns is-centered px-1">
-        <div className="column is-12-mobile is-10-tablet is-8-desktop">
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+      <main className="mt-2">{children}</main>
+
+      <div
+        className="hero is-success has-text-centered"
+        style={{ position: "fixed", bottom: 0, width: "100%" }}
+      >
+        <div className="hero-body p-2">
+          <p>Meron ka pang natitirang:</p>
+          <h1 className="title is-size-2">₱ 8,200,000,000</h1>
         </div>
       </div>
     </>
