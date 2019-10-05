@@ -3,7 +3,6 @@ import React from "react"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
-import Container from "../components/layout/container"
 import { Link } from "gatsby"
 
 const IndexPage = () => (
