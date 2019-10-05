@@ -12,13 +12,13 @@ const Header = ({ siteTitle }) => (
     className="has-background-light px-2"
     role="navigation"
     aria-label="main navigation"
-    style={{ position: "fixed", width: "100%", top: 0 }}
+    style={{ position: "fixed", width: "100%", top: 0, zIndex: 9 }}
   >
     <div className="columns is-centered py-1">
       <div className="column is-12-mobile is-10-tablet is-6-desktop">
         <div className="columns is-mobile is-vcentered">
           <div className="column">
-            <div className="ml-1 has-text-weight-bold">
+            <div className="ml-1 has-text-weight-bold is-size-5">
               {/* <span className="icon">
                 <Icon />
               </span> */}
@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => (
           </div>
 
           <div className="column is-narrow">
-            <button className="button is-primary mr-1">
+            <button className="button is-primary mr-1 is-large">
               <FontAwesomeIcon icon={faShoppingCart} />
             </button>
           </div>

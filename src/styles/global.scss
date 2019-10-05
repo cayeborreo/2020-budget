@@ -2,6 +2,10 @@
 @import "~bulma";
 @import "./__variables.scss";
 
+body, html, div, p, span {
+  cursor: default
+}
+
 @for $i from 0 through 7 {
   // Margin and padding
   .m-#{$i},

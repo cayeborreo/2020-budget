@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import classNames from "classnames"
 
 import Header from "./header"
 import Container from "./container"
@@ -26,7 +27,9 @@ const Layout = ({ children, showMoneyCounter }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main className="mt-2 mx-3">
+      <main
+        className={classNames("mt-2 mx-3", { "mb-5 pb-5": !!showMoneyCounter })}
+      >
         <Container>{children}</Container>
       </main>
 
