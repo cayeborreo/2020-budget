@@ -11,8 +11,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Container from "./container"
+// import Container from "./container"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, showMoneyCounter }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,17 +27,21 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main className="mt-2">{children}</main>
+      <main className="mt-2 mx-3">
+        <Container>{children}</Container>
+      </main>
 
-      <div
-        className="hero is-success has-text-centered"
-        style={{ position: "fixed", bottom: 0, width: "100%" }}
-      >
-        <div className="hero-body p-2">
-          <p>Meron ka pang natitirang:</p>
-          <h1 className="title is-size-2">₱ 8,200,000,000</h1>
+      {showMoneyCounter && (
+        <div
+          className="hero is-success has-text-centered"
+          style={{ position: "fixed", bottom: 0, width: "100%" }}
+        >
+          <div className="hero-body p-2">
+            <p>Meron ka pang natitirang:</p>
+            <h1 className="title is-size-2">₱ 8,200,000,000</h1>
+          </div>
         </div>
-      </div>
+      )}
     </>
   )
 }
