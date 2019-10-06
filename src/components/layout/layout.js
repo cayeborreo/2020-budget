@@ -5,13 +5,15 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import classNames from "classnames"
 
 import Header from "./header"
 import Container from "./container"
+import { AppContext } from "../../context/app-context"
+import { formatNumber } from "../services/util"
 
 const Layout = ({ children, showMoneyCounter }) => {
   const data = useStaticQuery(graphql`
@@ -24,6 +26,7 @@ const Layout = ({ children, showMoneyCounter }) => {
     }
   `)
 
+  const [state, setState] = useContext(AppContext)
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
@@ -40,7 +43,7 @@ const Layout = ({ children, showMoneyCounter }) => {
         >
           <div className="hero-body p-2">
             <p>Meron ka pang natitirang:</p>
-            <h1 className="title is-size-2">₱ 8,200,000,000</h1>
+            <h1 className="title is-size-2">₱ {formatNumber(state.wallet)}</h1>
           </div>
         </div>
       )}

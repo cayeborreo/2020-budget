@@ -2,7 +2,7 @@ import React from "react"
 import { formatNumber } from "../services/util"
 import Input from "./input"
 
-const Card = ({ name, price, imgUrl, description }) => {
+const Card = ({ name, price, imgUrl, description, children }) => {
   return (
     <div className="card">
       <div className="card-image">
@@ -28,9 +28,7 @@ const Card = ({ name, price, imgUrl, description }) => {
         <div className="content">{description}</div>
       </div>
 
-      <div className="card-footer">
-        <Input />
-      </div>
+      <div className="card-footer">{children}</div>
     </div>
   )
 }

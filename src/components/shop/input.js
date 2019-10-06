@@ -1,28 +1,65 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons"
+// import { Field } from "formik"
 
-const Input = ({ value }) => {
+const Input = ({
+  value,
+  type,
+  name,
+  handleSubtract,
+  handleAdd,
+  handleInputChange,
+}) => {
+  const handleFocus = event => {
+    event.target.select()
+  }
+  const handleBlur = event => {
+    // const value = event.target.value
+    // if (value === "") {
+    //   event.target.value = 0
+    //   handleInputChange(event)
+    // }
+  }
   return (
     <div className="field p-2 has-addons is-expanded">
-      <p className="control">
-        <button className="button is-danger is-medium">
+      {/* <p className="control">
+        <button
+          type="button"
+          className="button is-danger is-medium"
+          onClick={handleSubtract}
+          name={name}
+          value={value}
+        >
           <FontAwesomeIcon icon={faMinus} />
         </button>
-      </p>
+      </p> */}
       <p className="control">
         <input
-          className="input has-text-centered is-medium"
+          className="input is-medium has-text-centered"
           type="number"
-          placeholder="1,000"
+          onKeyDown={event => {
+            if (type === "number" && event.key === "e") event.preventDefault()
+          }}
+          name={name}
           value={value}
+          onChange={handleInputChange}
+          onBlur={handleBlur}
+          onFocus={handleFocus}
+          defaultValue={0}
         />
       </p>
-      <p className="control">
-        <button className="button is-success is-medium">
+      {/* <p className="control">
+        <button
+          type="button"
+          className="button is-success is-medium"
+          onClick={handleAdd}
+          name={name}
+          value={value}
+        >
           <FontAwesomeIcon icon={faPlus} />
         </button>
-      </p>
+      </p> */}
     </div>
   )
 }

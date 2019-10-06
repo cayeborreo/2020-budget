@@ -1,7 +1,12 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useContext } from "react"
+// import { Form, Formik } from "formik"
+import { AppContext } from "../context/app-context"
+
+// import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout/layout"
+import alternateItems from "../components/shop/alternateItems.json"
 import Card from "../components/shop/card"
+import Input from "../components/shop/input"
 
 const Shop = () => {
   // const data = useStaticQuery(graphql`
@@ -19,56 +24,47 @@ const Shop = () => {
 
   // const items = data.allGoogleSheetShoppingItemsRow.nodes
   // console.log(items)
-  const alternateItems = [
-    {
-      description:
-        "0% sugar kasi mahirap na, mahal magpagamot ng dyabetis sa bansang 'to.",
-      imgurl:
-        "https://images.unsplash.com/photo-1522036150865-e4ee8b0c2695?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      label: "Starbucks Tall Java Chip Frappuccino",
-      price: 165,
-    },
-    {
-      description:
-        "The Ultimate Matapobre Phone. Pwedeng-pwede kang mag-selfie with pride.",
-      imgurl:
-        "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      label: "iPhone 7, Space Gray",
-      price: 33000,
-    },
-    {
-      description:
-        "Bilang mahirap mag-commute, bili ka na lang ng sarili mong private vehicle.",
-      imgurl:
-        "https://images.unsplash.com/photo-1566367576585-051277d52997?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      label: "Toyota Fortuner, Black",
-      price: 2275000,
-    },
-    {
-      description:
-        "The Ultimate Matapobre Phone. Pwedeng-pwede kang mag-selfie with pride.",
-      imgurl:
-        "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      label: "iPhone 7, Space Gray",
-      price: 33000,
-    },
-    {
-      description:
-        "0% sugar kasi mahirap na, mahal magpagamot ng dyabetis sa bansang 'to.",
-      imgurl:
-        "https://images.unsplash.com/photo-1522036150865-e4ee8b0c2695?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      label: "Starbucks Tall Java Chip Frappuccino",
-      price: 165,
-    },
-    {
-      description:
-        "Bilang mahirap mag-commute, bili ka na lang ng sarili mong private vehicle.",
-      imgurl:
-        "https://images.unsplash.com/photo-1566367576585-051277d52997?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      label: "Toyota Fortuner, Black",
-      price: 2275000,
-    },
-  ]
+
+  const [state, setState] = useContext(AppContext)
+
+  const handleAdd = event => {
+    const target = event.currentTarget
+    console.log(target.type)
+    // console.log(input, input.value)
+    // setState(cart)
+  }
+
+  const handleSubtract = event => {
+    console.log("- me no", state)
+  }
+
+  const handleInputChange = event => {
+    const target = event.currentTarget
+    const name = target.name
+    const value = !!target.value ? parseInt(target.value) : 0
+
+    // Replacing cart with new quantity
+    // { price: quantity } format
+    const newCart = { ...state.cart, [name]: parseInt(value) }
+
+    // Compute for total
+    const prices = Object.keys(newCart)
+    const total = prices.reduce((accumulator, currentValue) => {
+      return (
+        parseInt(accumulator) +
+        parseInt(currentValue) * parseInt(newCart[currentValue])
+      )
+    }, 0)
+
+    // Subtract from the wallet
+    const newWallet = 8200000000 - parseInt(total)
+
+    setState({
+      wallet: newWallet,
+      cart: newCart,
+    })
+  }
+
   return (
     <Layout showMoneyCounter>
       <center>
@@ -77,30 +73,50 @@ const Shop = () => {
         </p>
       </center>
       <div className="columns is-multiline">
-        {/* {!!items
-          ? items.map((item, index) => (
-              <div className="column is-4-fullhd is-6-tablet" key={index}>
-                <Card
-                  name={item.label}
-                  price={item.price}
-                  description={item.description}
-                  imgUrl={item.imgurl}
-                  id={index}
-                />
-              </div>
-            ))
-          : */}
-        {alternateItems.map((item, index) => (
-          <div className="column is-4-fullhd is-6-tablet" key={index}>
-            <Card
-              id={index}
-              name={item.label}
-              price={item.price}
-              description={item.description}
+        <div className="column is-4-fullhd is-6-tablet">
+          <Card
+            // id={index}
+            name={alternateItems[0].label}
+            price={alternateItems[0].price}
+            description={alternateItems[0].description}
+          >
+            <Input
+              handleAdd={handleAdd}
+              handleSubtract={handleSubtract}
+              handleInputChange={handleInputChange}
+              name={alternateItems[0].price}
+              defaultValue={0}
             />
-          </div>
-        ))}
+          </Card>
+        </div>
+        <div className="column is-4-fullhd is-6-tablet">
+          <Card
+            // id={index}
+            name={alternateItems[1].label}
+            price={alternateItems[1].price}
+            description={alternateItems[1].description}
+          >
+            <Input
+              handleAdd={handleAdd}
+              handleSubtract={handleSubtract}
+              handleInputChange={handleInputChange}
+              name={alternateItems[1].price}
+              defaultValue={0}
+            />
+          </Card>
+        </div>
       </div>
+      <center>
+        <button type="submit" className="button is-large is-primary">
+          Submit
+        </button>
+      </center>
+      {/* </Form>
+        )}
+      /> */}
+      {/* ))} */}
+      {/* </form>
+      </Formik> */}
     </Layout>
   )
 }
