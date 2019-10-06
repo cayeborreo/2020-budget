@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useContext } from "react"
+import React, { useContext, Fragment } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import classNames from "classnames"
 
 import Header from "./header"
@@ -38,12 +38,31 @@ const Layout = ({ children, showMoneyCounter }) => {
 
       {showMoneyCounter && (
         <div
-          className="hero is-success has-text-centered"
+          className={classNames("hero has-text-centered", {
+            "is-success": !!state.wallet,
+            "is-danger": state.wallet <= 0,
+          })}
           style={{ position: "fixed", bottom: 0, width: "100%" }}
         >
           <div className="hero-body p-2">
-            <p>Meron ka pang natitirang:</p>
-            <h1 className="title is-size-2">₱ {formatNumber(state.wallet)}</h1>
+            {state.wallet <= 0 ? (
+              <Fragment>
+                {/* <p>Meron ka pang natitirang:</p> */}
+                <h1 className="title is-size-2">
+                  ₱ {formatNumber(state.wallet)}{" "}
+                  <Link to="/cart" className="button is-large is-primary">
+                    Checkout na besh!
+                  </Link>
+                </h1>
+              </Fragment>
+            ) : (
+              <Fragment>
+                <p>Meron ka pang natitirang:</p>
+                <h1 className="title is-size-2">
+                  ₱ {formatNumber(state.wallet)}
+                </h1>
+              </Fragment>
+            )}
           </div>
         </div>
       )}

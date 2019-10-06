@@ -1,38 +1,25 @@
 import React from "react"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons"
 
-const Input = ({
-  value,
-  type,
-  name,
-  handleSubtract,
-  handleAdd,
-  handleInputChange,
-}) => {
+const Input = ({ value, type, name, handleInputChange, isDisabled }) => {
   const handleFocus = event => {
     event.target.select()
   }
-  const handleBlur = event => {
-    // const value = event.target.value
-    // if (value === "") {
-    //   event.target.value = 0
-    //   handleInputChange(event)
-    // }
-  }
   return (
     <div className="field p-2 has-addons is-expanded">
-      {/* <p className="control">
+      <p className="control">
         <button
           type="button"
           className="button is-danger is-medium"
-          onClick={handleSubtract}
+          onClick={handleInputChange}
           name={name}
-          value={value}
+          id="subtract"
+          disabled={value === 0}
         >
           <FontAwesomeIcon icon={faMinus} />
         </button>
-      </p> */}
+      </p>
       <p className="control">
         <input
           className="input is-medium has-text-centered"
@@ -43,22 +30,24 @@ const Input = ({
           name={name}
           value={value}
           onChange={handleInputChange}
-          onBlur={handleBlur}
           onFocus={handleFocus}
-          defaultValue={0}
+          min={0}
+          id="input"
+          disabled={isDisabled}
         />
       </p>
-      {/* <p className="control">
+      <p className="control">
         <button
           type="button"
           className="button is-success is-medium"
-          onClick={handleAdd}
+          onClick={handleInputChange}
           name={name}
-          value={value}
+          id="add"
+          disabled={isDisabled}
         >
           <FontAwesomeIcon icon={faPlus} />
         </button>
-      </p> */}
+      </p>
     </div>
   )
 }

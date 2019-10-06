@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { AppContext } from "../context/app-context"
 
 // import { useStaticQuery, graphql } from "gatsby"
@@ -26,21 +26,18 @@ const Shop = () => {
 
   const [state, setState] = useContext(AppContext)
 
-  const handleAdd = event => {
-    const target = event.currentTarget
-    console.log(target.type)
-    // console.log(input, input.value)
-    // setState(cart)
-  }
-
-  const handleSubtract = event => {
-    console.log("- me no", state)
-  }
-
   const handleInputChange = event => {
     const target = event.currentTarget
     const name = target.name
-    const value = !!target.value ? parseInt(target.value) : 0
+    let value
+
+    if (target.id === "input") {
+      value = !!target.value ? parseInt(target.value) : 0
+    } else if (target.id === "subtract") {
+      value = !!state.cart[name] ? parseInt(state.cart[name] - 1) : 0
+    } else if (target.id === "add") {
+      value = !!state.cart[name] ? parseInt(state.cart[name] + 1) : 1
+    } else value = 0
 
     // Replacing cart with new quantity
     // { price: quantity } format
@@ -56,18 +53,29 @@ const Shop = () => {
     }, 0)
 
     // Subtract from the wallet
-    const newWallet = 8200000000 - parseInt(total)
+    const newWallet = 10 - parseInt(total)
 
     setState({
       wallet: newWallet,
       cart: newCart,
     })
-  }
 
+    console.log("After: ", state)
+  }
+  console.log(
+    "Input 0: ",
+    parseInt(state.cart[alternateItems[0].price]),
+    state.wallet
+  )
+  console.log(
+    "Input 1: ",
+    parseInt(state.cart[alternateItems[1].price]),
+    state.wallet
+  )
   return (
     <Layout showMoneyCounter>
       <center>
-        <p className="title my-3 has-text-dark">
+        <p className="title mb-3 has-text-dark">
           Start your Presidential Shopping Spree!
         </p>
       </center>
@@ -80,11 +88,10 @@ const Shop = () => {
             description={alternateItems[0].description}
           >
             <Input
-              handleAdd={handleAdd}
-              handleSubtract={handleSubtract}
               handleInputChange={handleInputChange}
               name={alternateItems[0].price}
-              defaultValue={0}
+              value={state.cart[alternateItems[0].price] || 0}
+              isDisabled={parseInt(alternateItems[0].price) > state.wallet}
             />
           </Card>
         </div>
@@ -96,20 +103,14 @@ const Shop = () => {
             description={alternateItems[1].description}
           >
             <Input
-              handleAdd={handleAdd}
-              handleSubtract={handleSubtract}
               handleInputChange={handleInputChange}
               name={alternateItems[1].price}
-              defaultValue={0}
+              value={state.cart[alternateItems[1].price] || 0}
+              isDisabled={parseInt(alternateItems[1].price) > state.wallet}
             />
           </Card>
         </div>
       </div>
-      <center>
-        <button type="submit" className="button is-large is-primary">
-          Submit
-        </button>
-      </center>
     </Layout>
   )
 }

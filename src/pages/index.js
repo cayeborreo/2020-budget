@@ -29,7 +29,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1 className="title is-size-2 my-3">
+      <h1 className="title is-size-2">
         Hanggang saan aabot ang{" "}
         <span className="has-text-danger">8.2 billion pesos</span> mo?
       </h1>
@@ -45,14 +45,13 @@ const IndexPage = () => {
       </center>
       <div className="content is-medium">
         <p>
-          Noong September 6, pina-apruba sa House Appropriations Commitee ang
-          budget na <b>8.2 billion pesos</b> para sa{" "}
-          <b>Office of the President (OP)</b> next year.
+          Kaka-approve lang noong Sep 6 ang budget na <b>8.2 billion pesos</b>{" "}
+          para sa <b>Office of the President (OP)</b> this 2020.
         </p>
         <p>
-          Hashtag <span className="has-text-info">#blessed</span> talaga ang OP
-          for 2020. ’Di tulad ng... halimbawa, ang Philippine General Hospital,
-          na nagkaroon pa ng{" "}
+          Hashtag <span className="has-text-info">#blessed</span> talaga ang OP,
+          ’di tulad ng... halimbawa, ang Philippine General Hospital, na
+          nagkaroon pa ng{" "}
           <a
             href="https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m"
             target="__blank"
