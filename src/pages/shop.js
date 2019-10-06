@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-// import { Form, Formik } from "formik"
 import { AppContext } from "../context/app-context"
 
 // import { useStaticQuery, graphql } from "gatsby"
@@ -111,12 +110,6 @@ const Shop = () => {
           Submit
         </button>
       </center>
-      {/* </Form>
-        )}
-      /> */}
-      {/* ))} */}
-      {/* </form>
-      </Formik> */}
     </Layout>
   )
 }

@@ -1,7 +1,6 @@
 import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons"
-// import { Field } from "formik"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons"
 
 const Input = ({
   value,
