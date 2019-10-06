@@ -14,7 +14,7 @@ const Input = ({ value }) => {
         <input
           className="input has-text-centered is-medium"
           type="number"
-          placeholder="1,000"
+          placeholder=1000
           value={value}
         />
       </p>
