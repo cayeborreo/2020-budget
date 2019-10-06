@@ -4,21 +4,6 @@ import Layout from "../components/layout/layout"
 import Card from "../components/shop/card"
 
 const Shop = () => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     allGoogleSheetShoppingItemsRow {
-  //       nodes {
-  //         imgurl
-  //         label
-  //         price
-  //         description
-  //       }
-  //     }
-  //   }
-  // `)
-
-  // const items = data.allGoogleSheetShoppingItemsRow.nodes
-  // console.log(items)
   const alternateItems = [
     {
       description:
