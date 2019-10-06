@@ -1,5 +1,4 @@
 import React from "react"
-// import { Link } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
@@ -15,14 +14,14 @@ const IndexPage = () => (
     </h1>
 
     <div className="content is-medium">
-      Kaunting website copy here explaining bakit nga ba natin ginawa ang
-      website na to
+      Kaunting mga salita dito na ipinapaliwanag kung bakit nga ba natin ginawa ang
+      website na 'to.
     </div>
 
     <center>
       <Link to="/shop">
         <button className="button is-primary is-large has-text-weight-bold my-5">
-          Let's go shopping!
+          Mag-shopping tayo!
         </button>
       </Link>
     </center>
