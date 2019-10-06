@@ -4,21 +4,6 @@ import Layout from "../components/layout/layout"
 import Card from "../components/shop/card"
 
 const Shop = () => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     allGoogleSheetShoppingItemsRow {
-  //       nodes {
-  //         imgurl
-  //         label
-  //         price
-  //         description
-  //       }
-  //     }
-  //   }
-  // `)
-
-  // const items = data.allGoogleSheetShoppingItemsRow.nodes
-  // console.log(items)
   const alternateItems = [
     {
       description:
@@ -77,19 +62,6 @@ const Shop = () => {
         </p>
       </center>
       <div className="columns is-multiline">
-        {/* {!!items
-          ? items.map((item, index) => (
-              <div className="column is-4-fullhd is-6-tablet" key={index}>
-                <Card
-                  name={item.label}
-                  price={item.price}
-                  description={item.description}
-                  imgUrl={item.imgurl}
-                  id={index}
-                />
-              </div>
-            ))
-          : */}
         {alternateItems.map((item, index) => (
           <div className="column is-4-fullhd is-6-tablet" key={index}>
             <Card
