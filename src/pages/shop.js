@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext } from "react"
 import { AppContext } from "../context/app-context"
 
 // import { useStaticQuery, graphql } from "gatsby"
