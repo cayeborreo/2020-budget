@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `Presidential Shopping Spree`,
     description: `Saan aabot ang 8.2 billion pesos mo?`,
-    author: `@cayeborreo`,
+    author: `@mcborreo`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,8 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `presidential-shopping-spree`,
+        short_name: `2020-op-budget`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

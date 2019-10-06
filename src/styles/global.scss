@@ -6,6 +6,20 @@ body, html, div, p, span {
   cursor: default
 }
 
+nav {
+  a {
+    color: white;
+
+    &:hover {
+      color: $primary
+    }
+  }
+}
+
+button, button > .icon, a {
+  cursor: pointer
+}
+
 @for $i from 0 through 7 {
   // Margin and padding
   .m-#{$i},

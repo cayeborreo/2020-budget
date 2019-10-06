@@ -26,7 +26,7 @@ const Layout = ({ children, showMoneyCounter }) => {
     }
   `)
 
-  const [state, setState] = useContext(AppContext)
+  const [state] = useContext(AppContext)
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />

@@ -17,7 +17,7 @@
     "gatsby-plugin-react-helmet": "^3.1.10",
     "gatsby-plugin-sass": "^2.1.17",
     "gatsby-plugin-sharp": "^2.2.27",
-    "gatsby-source-filesystem": "^2.1.28",
+    "gatsby-source-filesystem": "^2.1.29",
     "gatsby-source-google-sheets": "^1.1.1",
     "gatsby-transformer-sharp": "^2.2.19",
     "node-sass": "^4.12.0",
