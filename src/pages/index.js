@@ -103,7 +103,7 @@ const IndexPage = () => {
       <center>
         <Link to="/shop">
           <button className="button is-primary is-large has-text-weight-bold my-3">
-            Let’s go shopping!
+            Shop Now!
           </button>
         </Link>
       </center>
