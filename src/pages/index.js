@@ -1,31 +1,33 @@
 import React from "react"
-import { Link } from "gatsby"
-// import { Link, useStaticQuery } from "gatsby"
-// import { graphql } from "graphql"
-// import Img from "gatsby-image"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
-import presidentialPhoto from "../images/presidential-photo.jpg"
-import pgh from "../images/pgh.jpg"
 
 const IndexPage = () => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     presidentialPhoto: file(
-  //       relativePath: { eq: "images/presidential-photo.jpg" }
-  //     ) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 800) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  const data = useStaticQuery(graphql`
+    query {
+      presidentialPhoto: file(relativePath: { eq: "presidential-photo.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      pgh: file(relativePath: { eq: "pgh.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
-  // const presidentialPhoto = data.presidentialPhoto.childImageSharp.fluid
-  // console.log(presidentialPhoto)
+  const presidentialPhoto = data.presidentialPhoto.childImageSharp.fluid
+  const pgh = data.pgh.childImageSharp.fluid
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -33,16 +35,7 @@ const IndexPage = () => {
         Hanggang saan aabot ang{" "}
         <span className="has-text-danger">8.2 billion pesos</span> mo?
       </h1>
-      {/* <Img fluid={image} /> */}
-      <center>
-        <figure className="image is-3by2 my-3">
-          <img
-            src={presidentialPhoto}
-            alt="Malacanang"
-            title="Malacanang photo"
-          />
-        </figure>
-      </center>
+      <Img fluid={presidentialPhoto} />
       <div className="content is-medium">
         <p>
           Kaka-approve lang noong Sep 6 ang budget na <b>8.2 billion pesos</b>{" "}
@@ -61,25 +54,24 @@ const IndexPage = () => {
           </a>
           .
         </p>
-        <center>
-          <figure className="image is-3by2 mb-0">
-            <img
-              src={pgh}
-              alt="Kuha ni Richard Reyes para sa Philippine Daily Inquirer (https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m)"
-              title="Kuha ni Richard Reyes para sa Philippine Daily Inquirer (https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m)"
-            />
-          </figure>
-          <p className="is-size-7 mt-1 mb-2">
-            Kuha ni Richard Reyes para sa{" "}
-            <a
-              href="https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m"
-              target="__blank"
-              rel="noopener noreferrer"
-            >
-              Philippine Daily Inquirer
-            </a>
-          </p>
-        </center>
+
+        <Img
+          fluid={pgh}
+          alt="Kuha ni Richard Reyes para sa Philippine Daily Inquirer (https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m)"
+          title="Kuha ni Richard Reyes para sa Philippine Daily Inquirer (https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m)"
+        />
+
+        <p className="is-size-7 mt-1 mb-2">
+          Kuha ni Richard Reyes para sa{" "}
+          <a
+            href="https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m"
+            target="__blank"
+            rel="noopener noreferrer"
+          >
+            Philippine Daily Inquirer
+          </a>
+        </p>
+
         <p>
           <b>ANYWAY, ayun.</b>{" "}
           <a
