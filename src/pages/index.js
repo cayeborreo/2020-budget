@@ -35,7 +35,7 @@ const IndexPage = () => {
         Hanggang saan aabot ang{" "}
         <span className="has-text-danger">8.2 billion pesos</span> mo?
       </h1>
-      <Img fluid={presidentialPhoto} />
+      <Img fluid={presidentialPhoto} alt="presidential photo" />
       <div className="content is-medium">
         <p>
           Kaka-approve lang noong Sep 6 ang budget na <b>8.2 billion pesos</b>{" "}
