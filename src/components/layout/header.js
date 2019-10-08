@@ -34,11 +34,11 @@ const Header = ({ siteTitle }) => (
           </div>
 
           <div className="column is-narrow">
-            <button className="button is-primary mr-1 is-large">
+            <Link className="button is-primary mr-1 is-large" to="/cart">
               <span className="icon is-large">
                 <FontAwesomeIcon icon={faShoppingCart} />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -35,67 +35,34 @@ const IndexPage = () => {
         Hanggang saan aabot ang{" "}
         <span className="has-text-danger">8.2 billion pesos</span> mo?
       </h1>
-      <Img fluid={presidentialPhoto} alt="presidential photo" />
       <div className="content is-medium">
         <p>
-          Kaka-approve lang noong Sep 6 ang budget na <b>8.2 billion pesos</b>{" "}
-          para sa <b>Office of the President (OP)</b> this 2020.
-        </p>
-        <p>
-          Hashtag <span className="has-text-info">#blessed</span> talaga ang OP,
-          ’di tulad ng... halimbawa, ang Philippine General Hospital, na
-          nagkaroon pa ng{" "}
-          <a
-            href="https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m"
-            target="__blank"
-            rel="noopener noreferrer"
-          >
-            budget cut na 456 million
-          </a>
-          .
-        </p>
-
-        <Img
-          fluid={pgh}
-          alt="Kuha ni Richard Reyes para sa Philippine Daily Inquirer (https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m)"
-          title="Kuha ni Richard Reyes para sa Philippine Daily Inquirer (https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m)"
-        />
-
-        <p className="is-size-7 mt-1 mb-2">
-          Kuha ni Richard Reyes para sa{" "}
-          <a
-            href="https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m"
-            target="__blank"
-            rel="noopener noreferrer"
-          >
-            Philippine Daily Inquirer
-          </a>
-        </p>
-
-        <p>
-          <b>ANYWAY, ayun.</b>{" "}
+          <b>Walong bilyon</b>. ’Yan ang budget ng{" "}
+          <b>Office of the President (OP)</b> this 2020, and{" "}
           <a
             href="https://newsinfo.inquirer.net/1161623/office-of-the-presidents-p8-2-b-2020-budget-gets-swift-house-ok"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Wala pang anim na minutong pagtalakay
-          </a>
-          , aprubado na ’yung 8.2 billion OP budget. <b>Bongga!</b>
+            approved in less than six minutes
+          </a>{" "}
+          ng House Panel.
         </p>
         <p>
-          Pero sa totoo lang, ang hirap isipin sa anim na minuto na ’yun kung
-          ano nga ba ang mararating ng 8.2 billion pesos. Kaya dito natin
-          tingnan.
+          Para ’di tayo malula, dito natin tingnan:{" "}
+          <b>Saan nga ba aabot ang 8.2 billion pesos mo?</b>
         </p>
-
-        <b className="is-size-4">Saan nga ba aabot ang 8.2 billion pesos mo?</b>
       </div>
 
       <center>
         <Link to="/shop">
-          <button className="button is-primary is-large has-text-weight-bold my-3">
+          <button className="button is-primary is-large has-text-weight-bold my-1 is-fullwidth">
             Let’s go shopping!
+          </button>
+        </Link>
+        <Link to="/bakit">
+          <button className="button is-medium has-text-weight-bold mb-3 is-fullwidth">
+            8.2 billion?! Ano’ng chika non???
           </button>
         </Link>
       </center>
