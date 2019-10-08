@@ -1,4 +1,5 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 <p align="center">
   <a href="https://2020-budget.netlify.com">
     <img alt="Presidential Shopping Spree" src="https://raw.githubusercontent.com/cayeborreo/2020-budget/master/src/images/philippines.png" width="60" />
@@ -50,3 +51,19 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 
 [See emoji key](https://github.com/all-contributors/all-contributors#emoji-key-)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/jamesabaja"><img src="https://avatars0.githubusercontent.com/u/15464595?v=4" width="100px;" alt="James Gabriel Abaja"/><br /><sub><b>James Gabriel Abaja</b></sub></a><br /><a href="https://github.com/cayeborreo/2020-budget/commits?author=jamesabaja" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
