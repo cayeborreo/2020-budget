@@ -22,6 +22,20 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "cayeborreo",
+      "name": "Caye B",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/39559163?v=4",
+      "profile": "https://cayeborreo.com",
+      "contributions": [
+        "design",
+        "bug",
+        "content",
+        "doc",
+        "ideas",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
