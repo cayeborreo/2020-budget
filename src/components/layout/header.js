@@ -24,7 +24,7 @@ const Header = () => {
   const icon = data.icon.childImageSharp.fluid
   return (
     <nav
-      className="px-2"
+      className="px-2 has-background-purple"
       role="navigation"
       aria-label="main navigation"
       style={{
@@ -32,7 +32,6 @@ const Header = () => {
         width: "100%",
         top: 0,
         zIndex: 9,
-        backgroundColor: "#663399",
         color: "white",
       }}
     >

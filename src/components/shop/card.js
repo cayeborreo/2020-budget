@@ -17,7 +17,7 @@ const Card = ({ name, price, imgUrl, description, children }) => {
           />
         </figure>
       </div>
-      <div className="card-content">
+      <div className="card-content is-shopping-card">
         <div className="media mb-1">
           <div className="media-content">
             <p className="title is-4">{name}</p>

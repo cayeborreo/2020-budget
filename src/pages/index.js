@@ -1,6 +1,6 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
+// import Img from "gatsby-image"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
@@ -46,12 +46,12 @@ const IndexPage = () => {
 
       <center>
         <Link to="/shop">
-          <button className="button is-primary is-large has-text-weight-bold my-1 is-fullwidth">
+          <button className="button is-primary is-large my-1 is-fullwidth">
             Let’s go shopping!
           </button>
         </Link>
         <Link to="/bakit">
-          <button className="button has-text-weight-bold mb-3 is-fullwidth">
+          <button className="button mb-3 is-fullwidth">
             8.2 billion?! Ano’ng chika non???
           </button>
         </Link>

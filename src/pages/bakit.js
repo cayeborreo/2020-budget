@@ -22,11 +22,19 @@ const About = () => {
           }
         }
       }
+      sideEye: file(relativePath: { eq: "sideEye.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
   const presidentialPhoto = data.presidentialPhoto.childImageSharp.fluid
   const pgh = data.pgh.childImageSharp.fluid
+  const sideEye = data.sideEye.childImageSharp.fluid
 
   return (
     <Layout>
@@ -54,7 +62,26 @@ const About = () => {
           </a>
           .
         </p>
-
+        <article className="message is-primary">
+          <div className="message-body">
+            <p>
+              Malacañang is asking for a budget of P8.2 billion for 2020. This
+              is 21% higher than the P6.77 billion it received under the 2019
+              General Appropriations Act.{" "}
+              <span className="is-italic">
+                (Pia Ranada,{" "}
+                <a
+                  href="https://www.rappler.com/nation/239473-office-president-2020-budget-breezes-through-house-panel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rappler
+                </a>
+                )
+              </span>
+            </p>
+          </div>
+        </article>
         <Img
           fluid={pgh}
           alt="Kuha ni Richard Reyes para sa Philippine Daily Inquirer (https://newsinfo.inquirer.net/1171702/pgh-budget-for-2020-cut-by-p456m)"
@@ -82,7 +109,7 @@ const About = () => {
             Wala pang anim na minutong pagtalakay
           </a>
           , aprubado na ’yung 8.2 billion OP budget ng House Panel.{" "}
-          <b>Bongga!</b>
+          <b>Ang bilis!</b> (Manila traffic could never.)
         </p>
 
         <article className="message is-primary">
@@ -99,41 +126,82 @@ const About = () => {
               Undersecretary Philip Dy, presented their budget and gave updates
               on the office’s anti-poverty initiatives.
             </p>
-            <p>The OVP budget briefing lasted 24 minutes.</p>
-
             <p>
-              Malacañang is asking for a budget of P8.2 billion for 2020. This
-              is 21% higher than the P6.77 billion it received under the 2019
-              General Appropriations Act.
-            </p>
-            <p>
-              More than half of the 2020 OP budget consists of confidential and
-              intelligence funds amounting to P4.5 billion. This is almost
-              double the budget it asked for in the previous 3 years.
-            </p>
-
-            <p>
-              For 2020, if the proposed OP budget gets the green light,
-              Duterte’s office will receive the biggest share of confidential
-              and intelligence funds out of all the agencies in government,
-              including the police and military.
-            </p>
-
-            <p className="is-italic">
-              - Written by Pia Ranada for{" "}
-              <a
-                href="https://www.rappler.com/nation/239473-office-president-2020-budget-breezes-through-house-panel"
-                target="_blank"
-              >
-                Rappler
-              </a>
+              The OVP budget briefing lasted 24 minutes.{" "}
+              <span className="is-italic">
+                (Pia Ranada,{" "}
+                <a
+                  href="https://www.rappler.com/nation/239473-office-president-2020-budget-breezes-through-house-panel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rappler
+                </a>
+                )
+              </span>
             </p>
           </div>
         </article>
         <p>
-          Pero sa totoo lang, ang hirap isipin sa anim na minuto na ’yun kung
-          ano nga ba ang mararating ng 8.2 billion pesos. Kaya dito natin
-          tingnan.
+          I mean, okay naman siguro ’yun ’no... basta ba magagamit sa,
+          halimbawa, mga proyektong pang-edukasyon. O pang-kalusugan. O para sa
+          ating mga magsasaka...
+        </p>
+
+        <article className="message is-primary">
+          <div className="message-body">
+            <p>
+              More than half of the 2020 OP budget consists of{" "}
+              <b>
+                confidential and intelligence funds amounting to P4.5 billion.
+              </b>{" "}
+              This is almost double the budget it asked for in the previous 3
+              years.{" "}
+              <span className="is-italic">
+                (Pia Ranada,{" "}
+                <a
+                  href="https://www.rappler.com/nation/239473-office-president-2020-budget-breezes-through-house-panel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rappler
+                </a>
+                )
+              </span>
+            </p>
+          </div>
+        </article>
+        <p>
+          ...o kaya sa mass transport. Pwede ring housing initiatives? (Beke
+          nemen?)
+        </p>
+
+        <article className="message is-primary">
+          <div className="message-body">
+            <p>
+              For 2020, if the proposed OP budget gets the green light,
+              Duterte’s office will receive the biggest share of confidential
+              and intelligence funds out of all the agencies in government,
+              including the police and military.{" "}
+              <span className="is-italic">
+                (Pia Ranada,{" "}
+                <a
+                  href="https://www.rappler.com/nation/239473-office-president-2020-budget-breezes-through-house-panel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rappler
+                </a>
+                )
+              </span>
+            </p>
+          </div>
+        </article>
+        <Img fluid={sideEye} alt="Wala eh." className="mb-2" />
+        <hr />
+        <p>
+          Pero realtalk, ang hirap isipin ng tunay na halaga ng 8.2 billion
+          pesos. Ilang Stan Smiths ang kayang bilhin noon? Dito natin tingnan.
         </p>
 
         <b className="is-size-4">Saan nga ba aabot ang 8.2 billion pesos mo?</b>
@@ -141,7 +209,7 @@ const About = () => {
 
       <center>
         <Link to="/shop">
-          <button className="button is-primary is-large has-text-weight-bold my-3 is-fullwidth">
+          <button className="button is-primary is-large my-3 is-fullwidth">
             Let’s go shopping!
           </button>
         </Link>
