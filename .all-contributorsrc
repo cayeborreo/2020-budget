@@ -6,6 +6,15 @@
   "commit": false,
   "contributors": [
     {
+      "login": "jamesabaja",
+      "name": "James Gabriel Abaja",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/15464595?v=4",
+      "profile": "https://github.com/jamesabaja",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
       "login": "kimberrypi",
       "name": "Kim Santos",
       "avatar_url": "https://avatars2.githubusercontent.com/u/20434382?v=4",

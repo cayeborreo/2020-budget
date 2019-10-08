@@ -44,14 +44,6 @@ Please read [CONTRIBUTING.md](https://github.com/cayeborreo/2020-budget/blob/mas
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/cayeborreo/2020-budget/blob/master/LICENSE) file for details
 
-## Authors
-
-| [<img src="https://avatars1.githubusercontent.com/u/39559163?s=460&v=4" width="100px;"/><br /><sub><b>@cayeborreo</b></sub>](https://github.com/cayeborreo)<br />[:bug:](https://github.com/cayeborreo/2020-budget/issues?q=author%3Acayeborreo "Bug reports") [💻](https://github.com/cayeborreo/2020-budget/commits?author=cayeborreo "Code") [📖](https://github.com/cayeborreo/2020-budget/commits?author=cayeborreo "Documentation") 🎨 🤔 :eyes: |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-
-
-[See emoji key](https://github.com/all-contributors/all-contributors#emoji-key-)
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -60,6 +52,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore -->
 <table>
   <tr>
+    <td align="center"><a href="https://github.com/cayeborreo"><img src="https://avatars1.githubusercontent.com/u/39559163?s=460&v=4" width="100px;" alt="Caye Borreo"/><br /><sub><b>Caye Borreo</b></sub></a><br /><a href="https://github.com/cayeborreo/2020-budget/commits?author=cayeborreo" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/jamesabaja"><img src="https://avatars0.githubusercontent.com/u/15464595?v=4" width="100px;" alt="James Gabriel Abaja"/><br /><sub><b>James Gabriel Abaja</b></sub></a><br /><a href="https://github.com/cayeborreo/2020-budget/commits?author=jamesabaja" title="Code">💻</a></td>
     <td align="center"><a href="http://ksmorano.com"><img src="https://avatars2.githubusercontent.com/u/20434382?v=4" width="100px;" alt="Kim Santos"/><br /><sub><b>Kim Santos</b></sub></a><br /><a href="https://github.com/cayeborreo/2020-budget/commits?author=kimberrypi" title="Code">💻</a></td>
   </tr>
 </table>
