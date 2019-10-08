@@ -124,17 +124,12 @@ const Shop = () => {
           </Card>
         </div>
       </div>
-      <b>
-        <Link
-          className="button my-1 is-primary is-large is-fullwidth"
-          to="/cart"
-        >
-          Tapos na ako magwaldas
-        </Link>
-        <Link className="button is-light is-medium is-fullwidth" to="/cart">
-          Wait, I need a&nbsp;<span className="has-text-danger">reset</span>
-        </Link>
-      </b>
+      <Link className="button my-1 is-primary is-large is-fullwidth" to="/cart">
+        Tapos na ako magwaldas
+      </Link>
+      <Link className="button is-light is-medium is-fullwidth" to="/cart">
+        Wait, I need a&nbsp;<span className="has-text-danger">reset</span>
+      </Link>
     </Layout>
   )
 }

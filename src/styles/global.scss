@@ -17,12 +17,22 @@ nav {
 }
 
 button, a, .icon {
-  cursor: pointer
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.card-content {
+.is-shopping-card {
   height: 14rem;
   overflow-y: auto
+}
+
+.has-text-purple {
+  color: #663399
+}
+
+.is-purple, .has-background-purple {
+  background-color: #663399;
+  color: #fff
 }
 
 @for $i from 0 through 7 {
