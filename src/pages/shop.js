@@ -41,26 +41,46 @@ const Shop = () => {
 
     // Replacing cart with new quantity
     // { price: quantity } format
-    const newCart = { ...state.cart, [name]: parseInt(value) }
+    let newCart = { ...state.cart, [name]: parseInt(value) }
+    const newWallet = computeWallet(newCart)
 
+    // Check if computed wallet value is > 0
+    // If yes, continue
+    // If not, recompute the wallet based on the maximum allowable quantity for the selected item
+    if (newWallet < 0) {
+      newCart = {
+        ...newCart,
+        [name]: Math.floor(
+          newCart[name] - Math.abs(newWallet) / parseInt(name)
+        ),
+      }
+      setState({
+        wallet: computeWallet(newCart),
+        cart: newCart,
+      })
+    } else {
+      setState({
+        wallet: newWallet,
+        cart: newCart,
+      })
+    }
+
+    console.log("After: ", state)
+  }
+
+  // Reusable function that will compute the value of the wallet based on the given cart
+  const computeWallet = currentCart => {
     // Compute for total
-    const prices = Object.keys(newCart)
-    const total = prices.reduce((accumulator, currentValue) => {
+    let prices = Object.keys(currentCart)
+    let total = prices.reduce((accumulator, currentValue) => {
       return (
         parseInt(accumulator) +
-        parseInt(currentValue) * parseInt(newCart[currentValue])
+        parseInt(currentValue) * parseInt(currentCart[currentValue])
       )
     }, 0)
 
-    // Subtract from the wallet
-    const newWallet = 10 - parseInt(total)
-
-    setState({
-      wallet: newWallet,
-      cart: newCart,
-    })
-
-    console.log("After: ", state)
+    // Return current wallet value
+    return 10 - parseInt(total)
   }
   console.log(
     "Input 0: ",
