@@ -6,39 +6,29 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      presidentialPhoto: file(relativePath: { eq: "presidential-photo.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      pgh: file(relativePath: { eq: "pgh.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
-  const presidentialPhoto = data.presidentialPhoto.childImageSharp.fluid
-  const pgh = data.pgh.childImageSharp.fluid
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     presidentialPhoto: file(relativePath: { eq: "presidential-photo.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 800) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <Layout>
       <SEO title="Home" />
-      <h1 className="title is-size-2">
+      <h1 className="title is-size-2 is-size-3-mobile">
         Hanggang saan aabot ang{" "}
         <span className="has-text-danger">8.2 billion pesos</span> mo?
       </h1>
       <div className="content is-medium">
         <p>
           <b>Walong bilyon</b>. ’Yan ang budget ng{" "}
-          <b>Office of the President (OP)</b> this 2020, and{" "}
+          <b>Office of the President (OP)</b> this 2020, na{" "}
           <a
             href="https://newsinfo.inquirer.net/1161623/office-of-the-presidents-p8-2-b-2020-budget-gets-swift-house-ok"
             target="_blank"
@@ -61,7 +51,7 @@ const IndexPage = () => {
           </button>
         </Link>
         <Link to="/bakit">
-          <button className="button is-medium has-text-weight-bold mb-3 is-fullwidth">
+          <button className="button has-text-weight-bold mb-3 is-fullwidth">
             8.2 billion?! Ano’ng chika non???
           </button>
         </Link>

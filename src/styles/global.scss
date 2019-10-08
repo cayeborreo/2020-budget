@@ -16,8 +16,13 @@ nav {
   }
 }
 
-button, button > .icon, a > .icon {
+button, a, .icon {
   cursor: pointer
+}
+
+.card-content {
+  height: 14rem;
+  overflow-y: auto
 }
 
 @for $i from 0 through 7 {

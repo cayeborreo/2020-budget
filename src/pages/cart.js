@@ -1,8 +1,13 @@
 import React from "react"
 import Layout from "../components/layout/layout"
+import SEO from "../components/layout/seo"
 
 const Cart = () => {
-  return <Layout>This is da cart</Layout>
+  return (
+    <Layout>
+      <SEO title="Cart" />
+    </Layout>
+  )
 }
 
 export default Cart

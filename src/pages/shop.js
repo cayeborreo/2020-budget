@@ -6,6 +6,8 @@ import Layout from "../components/layout/layout"
 import alternateItems from "../components/shop/alternateItems.json"
 import Card from "../components/shop/card"
 import Input from "../components/shop/input"
+import SEO from "../components/layout/seo"
+import { Link } from "gatsby"
 
 const Shop = () => {
   // const data = useStaticQuery(graphql`
@@ -82,18 +84,9 @@ const Shop = () => {
     // Return current wallet value
     return 10 - parseInt(total)
   }
-  console.log(
-    "Input 0: ",
-    parseInt(state.cart[alternateItems[0].price]),
-    state.wallet
-  )
-  console.log(
-    "Input 1: ",
-    parseInt(state.cart[alternateItems[1].price]),
-    state.wallet
-  )
   return (
     <Layout showMoneyCounter>
+      <SEO title="Shop" />
       <center>
         <p className="title mb-3 has-text-dark">
           Start your Presidential Shopping Spree!
@@ -131,6 +124,17 @@ const Shop = () => {
           </Card>
         </div>
       </div>
+      <b>
+        <Link
+          className="button my-1 is-primary is-large is-fullwidth"
+          to="/cart"
+        >
+          Tapos na ako magwaldas
+        </Link>
+        <Link className="button is-light is-medium is-fullwidth" to="/cart">
+          Wait, I need a&nbsp;<span className="has-text-danger">reset</span>
+        </Link>
+      </b>
     </Layout>
   )
 }

@@ -18,7 +18,7 @@ const Card = ({ name, price, imgUrl, description, children }) => {
         </figure>
       </div>
       <div className="card-content">
-        <div className="media">
+        <div className="media mb-1">
           <div className="media-content">
             <p className="title is-4">{name}</p>
             <p className="subtitle is-4">₱ {formatNumber(price)}</p>

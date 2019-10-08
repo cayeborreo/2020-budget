@@ -31,7 +31,7 @@ const Layout = ({ children, showMoneyCounter }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main
-        className={classNames("mt-2 mx-3", { "mb-5 pb-5": !!showMoneyCounter })}
+        className={classNames("mt-3 mx-1", { "mb-5 pb-5": !!showMoneyCounter })}
       >
         <Container>{children}</Container>
       </main>
@@ -44,13 +44,13 @@ const Layout = ({ children, showMoneyCounter }) => {
           })}
           style={{ position: "fixed", bottom: 0, width: "100%" }}
         >
-          <div className="hero-body p-2">
+          <div className="hero-body p-1">
             {state.wallet <= 0 ? (
               <Fragment>
                 {/* <p>Meron ka pang natitirang:</p> */}
-                <h1 className="title is-size-2">
+                <h1 className="title is-size-1 is-size-2-mobile">
                   ₱ {formatNumber(state.wallet)}{" "}
-                  <Link to="/cart" className="button is-large is-primary">
+                  <Link to="/cart" className="ml-2 button is-large is-primary">
                     Checkout na besh!
                   </Link>
                 </h1>
@@ -58,7 +58,7 @@ const Layout = ({ children, showMoneyCounter }) => {
             ) : (
               <Fragment>
                 <p>Meron ka pang natitirang:</p>
-                <h1 className="title is-size-2">
+                <h1 className="title is-size-1 is-size-2-mobile">
                   ₱ {formatNumber(state.wallet)}
                 </h1>
               </Fragment>

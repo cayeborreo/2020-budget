@@ -31,7 +31,7 @@ const About = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1 className="title is-size-2">
+      <h1 className="title is-size-2 is-size-3-mobile">
         Hanggang saan aabot ang{" "}
         <span className="has-text-danger">8.2 billion pesos</span> mo?
       </h1>
@@ -81,7 +81,8 @@ const About = () => {
           >
             Wala pang anim na minutong pagtalakay
           </a>
-          , aprubado na ’yung 8.2 billion OP budget ng House Panel. <b>Bongga!</b>
+          , aprubado na ’yung 8.2 billion OP budget ng House Panel.{" "}
+          <b>Bongga!</b>
         </p>
 
         <article className="message is-primary">
