@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "kimberrypi",
+      "name": "Kim Santos",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/20434382?v=4",
+      "profile": "http://ksmorano.com",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "2020-budget",
+  "projectOwner": "cayeborreo",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
