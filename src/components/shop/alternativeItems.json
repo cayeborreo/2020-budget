@@ -4,14 +4,14 @@
     "description": "25% sugar kasi mahirap na, mahal magpagamot ng dyabetis sa bansang 'to.",
     "imgurl": "https://images.unsplash.com/photo-1522036150865-e4ee8b0c2695?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     "label": "Starbucks Tall Java Chip Frappuccino",
-    "price": 1
+    "price": 100000000
   },
   {
     "id": 2,
     "description": "The Ultimate Matapobre Phone. Pwedeng-pwede kang mag-selfie with pride.",
     "imgurl": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     "label": "iPhone 7, Space Gray",
-    "price": 2
+    "price": 20000000
   },
   {
     "id": 3,

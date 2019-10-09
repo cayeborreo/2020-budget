@@ -28,7 +28,9 @@ const Card = ({ name, price, imgUrl, description, children }) => {
         <div className="content">{description}</div>
       </div>
 
-      <div className="card-footer">{children}</div>
+      <div className="card-footer">
+        <center>{children}</center>
+      </div>
     </div>
   )
 }

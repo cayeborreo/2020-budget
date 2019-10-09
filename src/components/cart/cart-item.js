@@ -7,7 +7,17 @@ const CartItem = ({ name, price, quantity, imgUrl }) => {
       <div className="card-content">
         <article className="media">
           <figure className="media-left">
-            <p className="image is-128x128">
+            <p className="image is-128x128 is-hidden-mobile">
+              <img
+                src={
+                  !!imgUrl
+                    ? imgUrl
+                    : "https://bulma.io/images/placeholders/128x128.png"
+                }
+              />
+            </p>
+
+            <p className="image is-64x64 is-hidden-tablet">
               <img
                 src={
                   !!imgUrl
@@ -19,22 +29,22 @@ const CartItem = ({ name, price, quantity, imgUrl }) => {
           </figure>
           <div className="media-content">
             <div className="content">
-              <p className="is-size-3 has-text-weight-bold">
+              <p className="is-size-3 has-text-weight-bold mb-1">
                 {name || "Item Name"}
               </p>
+              <div className="columns my-0 py-0">
+                <div className="column py-0">
+                  <span className="tag is-success is-medium">
+                    ₱ {formatNumber(price || 0)}
+                  </span>
+                </div>
+                <div className="column py-0 has-text-right">
+                  <p className="is-size-4 is-size-5-mobile">
+                    × {quantity || 0}
+                  </p>
+                </div>
+              </div>
             </div>
-            <nav className="level">
-              <div className="level-left">
-                <div className="level-item">
-                  <p className="is-size-4">₱ {formatNumber(price || 0)}</p>
-                </div>
-              </div>
-              <div className="level-right">
-                <div className="level-item">
-                  <p className="is-size-4 mr-1">× {quantity || 0}</p>
-                </div>
-              </div>
-            </nav>
           </div>
 
           {/* TO-DO: Delete cart item

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 const initialState = {
-  wallet: 10,
+  wallet: 8200000000,
   cart: {},
 }
 const AppContext = React.createContext(initialState)

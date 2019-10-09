@@ -3,7 +3,7 @@ import { AppContext } from "../context/app-context"
 
 // import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout/layout"
-import alternateItems from "../components/shop/alternateItems.json"
+import items from "../components/shop/alternativeItems.json"
 import Card from "../components/shop/card"
 import Input from "../components/shop/input"
 import SEO from "../components/layout/seo"
@@ -82,7 +82,7 @@ const Shop = () => {
     }, 0)
 
     // Return current wallet value
-    return 10 - parseInt(total)
+    return 8200000000 - parseInt(total)
   }
   return (
     <Layout showMoneyCounter>
@@ -96,30 +96,30 @@ const Shop = () => {
         <div className="column is-4-fullhd is-6-tablet">
           <Card
             // id={index}
-            name={alternateItems[0].label}
-            price={alternateItems[0].price}
-            description={alternateItems[0].description}
+            name={items[0].label}
+            price={items[0].price}
+            description={items[0].description}
           >
             <Input
               handleInputChange={handleInputChange}
-              name={alternateItems[0].price}
-              value={state.cart[alternateItems[0].price] || 0}
-              isDisabled={parseInt(alternateItems[0].price) > state.wallet}
+              name={items[0].price}
+              value={state.cart[items[0].price] || 0}
+              isDisabled={parseInt(items[0].price) > state.wallet}
             />
           </Card>
         </div>
         <div className="column is-4-fullhd is-6-tablet">
           <Card
             // id={index}
-            name={alternateItems[1].label}
-            price={alternateItems[1].price}
-            description={alternateItems[1].description}
+            name={items[1].label}
+            price={items[1].price}
+            description={items[1].description}
           >
             <Input
               handleInputChange={handleInputChange}
-              name={alternateItems[1].price}
-              value={state.cart[alternateItems[1].price] || 0}
-              isDisabled={parseInt(alternateItems[1].price) > state.wallet}
+              name={items[1].price}
+              value={state.cart[items[1].price] || 0}
+              isDisabled={parseInt(items[1].price) > state.wallet}
             />
           </Card>
         </div>

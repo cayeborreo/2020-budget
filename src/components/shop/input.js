@@ -7,7 +7,7 @@ const Input = ({ value, type, name, handleInputChange, isDisabled }) => {
     event.target.select()
   }
   return (
-    <div className="field p-2 has-addons is-expanded">
+    <div className="field has-addons m-2">
       <p className="control">
         <button
           type="button"
@@ -20,7 +20,7 @@ const Input = ({ value, type, name, handleInputChange, isDisabled }) => {
           <FontAwesomeIcon icon={faMinus} />
         </button>
       </p>
-      <p className="control">
+      <p className="control is-expanded">
         <input
           className="input is-medium has-text-centered"
           type="number"
