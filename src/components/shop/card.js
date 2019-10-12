@@ -19,8 +19,8 @@ const Card = ({ name, price, imgUrl, description, children }) => {
       <div className="card-content is-shopping-card">
         <div className="media mb-1">
           <div className="media-content">
-            <p className="title is-4">{name}</p>
-            <p className="subtitle is-4">₱ {formatNumber(price)}</p>
+            <p className="title is-4 mb-1">{name}</p>
+            <p className="tag is-medium">₱ {formatNumber(price)}</p>
           </div>
         </div>
 
