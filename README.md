@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/916995c3-7416-4a22-9eca-b0d0a74ca534/deploy-status)](https://app.netlify.com/sites/2020-budget/deploys)
 
 <p align="center">
@@ -59,6 +59,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://ksmorano.com"><img src="https://avatars2.githubusercontent.com/u/20434382?v=4" width="100px;" alt="Kim Santos"/><br /><sub><b>Kim Santos</b></sub></a><br /><a href="https://github.com/cayeborreo/2020-budget/commits?author=kimberrypi" title="Code">💻</a></td>
     <td align="center"><a href="https://cayeborreo.com"><img src="https://avatars0.githubusercontent.com/u/39559163?v=4" width="100px;" alt="Caye B"/><br /><sub><b>Caye B</b></sub></a><br /><a href="#design-cayeborreo" title="Design">🎨</a> <a href="https://github.com/cayeborreo/2020-budget/issues?q=author%3Acayeborreo" title="Bug reports">🐛</a> <a href="#content-cayeborreo" title="Content">🖋</a> <a href="https://github.com/cayeborreo/2020-budget/commits?author=cayeborreo" title="Documentation">📖</a> <a href="#ideas-cayeborreo" title="Ideas, Planning, & Feedback">🤔</a> <a href="#review-cayeborreo" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/cayeborreo/2020-budget/commits?author=cayeborreo" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/alexyiangou"><img src="https://avatars2.githubusercontent.com/u/41811731?v=4" width="100px;" alt="Alexandros Yiangou"/><br /><sub><b>Alexandros Yiangou</b></sub></a><br /><a href="https://github.com/cayeborreo/2020-budget/commits?author=alexyiangou" title="Code">💻</a></td>
+    <td align="center"><a href="http://omkarshelar.dev"><img src="https://avatars1.githubusercontent.com/u/13034520?v=4" width="100px;" alt="Omkar Shelar"/><br /><sub><b>Omkar Shelar</b></sub></a><br /><a href="https://github.com/cayeborreo/2020-budget/commits?author=omkarshelar" title="Code">💻</a></td>
   </tr>
 </table>
 
