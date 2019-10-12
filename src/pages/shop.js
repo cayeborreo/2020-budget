@@ -115,9 +115,9 @@ const Shop = () => {
       <Link className="button my-1 is-primary is-large is-fullwidth" to="/cart">
         Tapos na ako magwaldas
       </Link>
-      <Link className="button is-light is-medium is-fullwidth" to="/cart">
+      <button className="button is-light is-medium is-fullwidth" onClick={() => setState({cart: {}, wallet: computeWallet({})})}>
         Wait, I need a&nbsp;<span className="has-text-danger">reset</span>
-      </Link>
+      </button>
     </Layout>
   )
 }
