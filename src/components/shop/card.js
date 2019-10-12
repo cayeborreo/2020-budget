@@ -1,9 +1,15 @@
 import React from "react"
+import classNames from "classnames"
+
 import { formatNumber } from "../services/util"
 
-const Card = ({ name, price, imgUrl, description, children }) => {
+const Card = ({ name, price, imgUrl, description, isDisabled, children }) => {
   return (
-    <div className="card">
+    <div
+      className={classNames("card", {
+        "has-background-grey-lighter has-text-grey": isDisabled,
+      })}
+    >
       <div className="card-image">
         <figure className="image is-4by3">
           <img
@@ -19,8 +25,26 @@ const Card = ({ name, price, imgUrl, description, children }) => {
       <div className="card-content is-shopping-card">
         <div className="media mb-1">
           <div className="media-content">
-            <p className="title is-4 mb-1">{name}</p>
-            <p className="tag is-medium">₱ {formatNumber(price)}</p>
+            <p
+              className={classNames("title is-4 mb-1", {
+                "has-text-grey": isDisabled,
+              })}
+            >
+              {name}
+            </p>
+            <button
+              className={classNames(
+                "button has-text-weight-normal is-static is-outlined",
+                {
+                  "is-danger": isDisabled,
+                },
+                {
+                  "is-success": !isDisabled,
+                }
+              )}
+            >
+              ₱ {formatNumber(price)}
+            </button>
           </div>
         </div>
 

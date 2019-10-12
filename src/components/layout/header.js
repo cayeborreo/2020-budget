@@ -34,7 +34,7 @@ const Header = () => {
       }}
     >
       <div className="columns is-centered py-1">
-        <div className="column is-12-mobile is-10-tablet is-6-desktop">
+        <div className="column is-12-mobile is-10-tablet is-8-desktop">
           <div className="columns is-mobile is-vcentered">
             <div className="column px-0">
               <div className="ml-1 has-text-weight-bold is-size-5">
@@ -55,11 +55,16 @@ const Header = () => {
             </div>
 
             <div className="column is-narrow px-0">
-              <Link className="button is-primary mr-1 is-medium" to="/cart">
-                <span className="icon is-medium">
-                  <FontAwesomeIcon icon={faShoppingCart} />
-                </span>
-              </Link>
+              <div className="buttons">
+                <button className="button is-outlined is-inverted is-primary">
+                  Share
+                </button>
+                <Link className="button is-primary mr-1" to="/cart">
+                  <span className="icon">
+                    <FontAwesomeIcon icon={faShoppingCart} />
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

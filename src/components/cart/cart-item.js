@@ -14,6 +14,7 @@ const CartItem = ({ name, price, quantity, imgUrl }) => {
                     ? imgUrl
                     : "https://bulma.io/images/placeholders/128x128.png"
                 }
+                alt={name}
               />
             </p>
 
@@ -24,19 +25,20 @@ const CartItem = ({ name, price, quantity, imgUrl }) => {
                     ? imgUrl
                     : "https://bulma.io/images/placeholders/128x128.png"
                 }
+                alt={name}
               />
             </p>
           </figure>
           <div className="media-content">
             <div className="content">
-              <p className="title is-3 is-4-mobile mb-1">
+              <p className="title is-3 is-size-4-mobile mb-1">
                 {name || "Item Name"}
               </p>
-              <div className="columns my-0 py-0">
+              <div className="columns my-0 py-0 is-mobile is-vcentered">
                 <div className="column py-0">
-                  <span className="tag is-success is-large">
+                  <button className="button is-success is-medium-tablet is-outlined is-static has-text-weight-normal">
                     ₱ {formatNumber(price || 0)}
-                  </span>
+                  </button>
                 </div>
                 <div className="column py-0 has-text-right">
                   <p className="is-size-4 is-size-5-mobile">

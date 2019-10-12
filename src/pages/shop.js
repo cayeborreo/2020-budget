@@ -8,6 +8,7 @@ import Card from "../components/shop/card"
 import Input from "../components/shop/input"
 import SEO from "../components/layout/seo"
 import { Link } from "gatsby"
+import PageHeader from "../components/layout/page-header"
 
 const Shop = () => {
   // const data = useStaticQuery(graphql`
@@ -66,8 +67,6 @@ const Shop = () => {
         cart: newCart,
       })
     }
-
-    console.log("After: ", state)
   }
 
   // Reusable function that will compute the value of the wallet based on the given cart
@@ -84,14 +83,14 @@ const Shop = () => {
     // Return current wallet value
     return 8200000000 - parseInt(total)
   }
+
   return (
     <Layout showMoneyCounter>
       <SEO title="Shop" />
-      <center>
-        <p className="title mb-3 has-text-dark">
-          Start your Presidential Shopping Spree!
-        </p>
-      </center>
+      <PageHeader
+        backRoute="/"
+        pageTitle="Start your Presidential Shopping Spree!"
+      />
       <div className="columns is-multiline">
         {items.map((item, index) => (
           <div className="column is-4-fullhd is-6-tablet" key={index}>
@@ -101,6 +100,7 @@ const Shop = () => {
               price={item.price}
               description={item.description}
               imgUrl={item.imgurl}
+              isDisabled={parseInt(item.price) > state.wallet}
             >
               <Input
                 handleInputChange={handleInputChange}
@@ -115,7 +115,10 @@ const Shop = () => {
       <Link className="button my-1 is-primary is-large is-fullwidth" to="/cart">
         Tapos na ako magwaldas
       </Link>
-      <button className="button is-light is-medium is-fullwidth" onClick={() => setState({cart: {}, wallet: computeWallet({})})}>
+      <button
+        className="button is-light is-medium is-fullwidth"
+        onClick={() => setState({ cart: {}, wallet: computeWallet({}) })}
+      >
         Wait, I need a&nbsp;<span className="has-text-danger">reset</span>
       </button>
     </Layout>
