@@ -40,7 +40,7 @@ const CartItem = ({ name, price, quantity, imgUrl }) => {
                 </div>
                 <div className="column py-0 has-text-right">
                   <p className="is-size-4 is-size-5-mobile">
-                    × {quantity || 0}
+                    × {formatNumber(quantity || 0)}
                   </p>
                 </div>
               </div>
