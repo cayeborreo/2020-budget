@@ -31,7 +31,7 @@ const Layout = ({ children, showMoneyCounter }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main
-        className={classNames("mt-2 mx-1", { "mb-5 pb-5": !!showMoneyCounter })}
+        className={classNames("my-2 mx-1", { "mb-5 pb-5": !!showMoneyCounter })}
       >
         <Container>{children}</Container>
       </main>

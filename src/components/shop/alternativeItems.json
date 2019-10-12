@@ -1,20 +1,38 @@
 [
   {
+    "label": "Starbucks Frappe",
     "description": "25% sugar kasi mahirap na, mahal magpagamot ng dyabetis sa Pinas.",
     "imgurl": "https://images.unsplash.com/photo-1522036150865-e4ee8b0c2695?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    "label": "Starbucks Frappe",
     "price": 170
   },
   {
-    "description": "100% legit model. Fresh from the Apple Store, hindi Recto o Pedro Gil.",
-    "imgurl": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    "label": "iPhone 7",
-    "price": 33000
+    "label": "Adidas Stan Smith",
+    "description": "White na mukhang malinis at pure. (99% of PH politicians can't relate.)",
+    "imgurl": "https://images.unsplash.com/photo-1544441892-794166f1e3be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    "price": 4800
   },
   {
+    "label": "Trip to Singapore",
+    "description": "3D2N rate per person, Universal Studious tour included. *wink*",
+    "imgurl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
+    "price": 8000
+  },
+  {
+    "label": "Nintendo Switch",
+    "description": "Para ma-experience mo ang tunay na highway speed, kahit sa Mario Kart lang.",
+    "imgurl": "https://images.unsplash.com/photo-1560278687-2941249fd3d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    "price": 15000
+  },
+  {
+    "label": "iPhone X",
+    "description": "100% legit model. Fresh from the Apple Store, hindi Recto o Pedro Gil.",
+    "imgurl": "https://images.unsplash.com/photo-1567440648277-747037564d67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",
+    "price": 43990
+  },
+  {
+    "label": "Toyota Fortuner",
     "description": "Bilang mahirap mag-commute, bili ka na lang ng sarili mong private vehicle.",
     "imgurl": "https://images.unsplash.com/photo-1566367576585-051277d52997?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    "label": "Toyota Fortuner",
     "price": 2275000
   }
 ]

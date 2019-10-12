@@ -10,7 +10,7 @@ import CartItem from "../components/cart/cart-item"
 import productList from "../components/shop/alternativeItems.json"
 import PageHeader from "../components/layout/page-header"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faWallet, faMoneyBill } from "@fortawesome/free-solid-svg-icons"
+import { faMoneyBill } from "@fortawesome/free-solid-svg-icons"
 import { formatNumber } from "../components/services/util"
 
 const Cart = () => {
@@ -31,12 +31,12 @@ const Cart = () => {
       </center>
       <div className="content mt-2 is-medium">
         May sukli ka pang:
-        <span className="icon has-text-success mx-1">
-          <i>
-            <FontAwesomeIcon icon={faMoneyBill} />
-          </i>
-        </span>
-        <b>{formatNumber(state.wallet)}</b>
+        <div className="has-text-success">
+          <FontAwesomeIcon icon={faMoneyBill} />
+          <b className="ml-1 has-text-dark is-size-3-tablet">
+            {formatNumber(state.wallet)}
+          </b>
+        </div>
       </div>
       <Link
         to="/complete"

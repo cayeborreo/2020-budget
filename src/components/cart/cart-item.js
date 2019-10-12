@@ -31,9 +31,7 @@ const CartItem = ({ name, price, quantity, imgUrl }) => {
           </figure>
           <div className="media-content">
             <div className="content">
-              <p className="title is-3 is-size-4-mobile mb-1">
-                {name || "Item Name"}
-              </p>
+              <p className="title is-4 mb-1">{name || "Item Name"}</p>
               <div className="columns my-0 py-0 is-mobile is-vcentered">
                 <div className="column py-0">
                   <button className="button is-success is-medium-tablet is-outlined is-static has-text-weight-normal">
