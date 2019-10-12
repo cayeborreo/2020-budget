@@ -1,5 +1,8 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/916995c3-7416-4a22-9eca-b0d0a74ca534/deploy-status)](https://app.netlify.com/sites/2020-budget/deploys)
+
 <p align="center">
   <a href="https://2020-budget.netlify.com">
     <img alt="Presidential Shopping Spree" src="https://raw.githubusercontent.com/cayeborreo/2020-budget/master/src/images/philippines.png" width="60" />
