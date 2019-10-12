@@ -1,6 +1,5 @@
 import React from "react"
 import { formatNumber } from "../services/util"
-// import Input from "./input"
 
 const Card = ({ name, price, imgUrl, description, children }) => {
   return (

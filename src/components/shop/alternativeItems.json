@@ -1,44 +1,20 @@
 [
   {
-    "id": 1,
     "description": "25% sugar kasi mahirap na, mahal magpagamot ng dyabetis sa bansang 'to.",
     "imgurl": "https://images.unsplash.com/photo-1522036150865-e4ee8b0c2695?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    "label": "Starbucks Tall Java Chip Frappuccino",
-    "price": 100000000
+    "label": "Starbucks Frappe",
+    "price": 170
   },
   {
-    "id": 2,
-    "description": "The Ultimate Matapobre Phone. Pwedeng-pwede kang mag-selfie with pride.",
+    "description": "100% legit OG model. Fresh from the Apple Store, hindi Recto o Pedro Gil.",
     "imgurl": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    "label": "iPhone 7, Space Gray",
-    "price": 20000000
-  },
-  {
-    "id": 3,
-    "description": "Bilang mahirap mag-commute, bili ka na lang ng sarili mong private vehicle.",
-    "imgurl": "https://images.unsplash.com/photo-1566367576585-051277d52997?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    "label": "Toyota Fortuner, Black",
-    "price": 2275000
-  },
-  {
-    "id": 4,
-    "description": "The Ultimate Matapobre Phone. Pwedeng-pwede kang mag-selfie with pride.",
-    "imgurl": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    "label": "Item Number 4",
+    "label": "iPhone 7",
     "price": 33000
   },
   {
-    "id": 5,
-    "description": "25% sugar kasi mahirap na, mahal magpagamot ng dyabetis sa bansang 'to.",
-    "imgurl": "https://images.unsplash.com/photo-1522036150865-e4ee8b0c2695?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    "label": "Item Number 5",
-    "price": 165
-  },
-  {
-    "id": 6,
     "description": "Bilang mahirap mag-commute, bili ka na lang ng sarili mong private vehicle.",
     "imgurl": "https://images.unsplash.com/photo-1566367576585-051277d52997?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    "label": "Item Number 6",
+    "label": "Toyota Fortuner",
     "price": 2275000
   }
 ]

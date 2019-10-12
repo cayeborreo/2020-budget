@@ -20,6 +20,7 @@ const Cart = () => {
           name={item.label}
           price={item.price}
           quantity={item.quantity}
+          imgUrl={item.imgurl}
         />
       ))}
     </Fragment>
@@ -50,7 +51,7 @@ const Cart = () => {
     <Layout>
       <SEO title="Cart" />
       <center>
-        <p className="title has-text-dark mb-4">Your shopping cart so far:</p>
+        <p className="title has-text-dark mb-4">Your shopping cart:</p>
 
         {mapCartItems()}
 

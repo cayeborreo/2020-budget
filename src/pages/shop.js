@@ -93,36 +93,24 @@ const Shop = () => {
         </p>
       </center>
       <div className="columns is-multiline">
-        <div className="column is-4-fullhd is-6-tablet">
-          <Card
-            // id={index}
-            name={items[0].label}
-            price={items[0].price}
-            description={items[0].description}
-          >
-            <Input
-              handleInputChange={handleInputChange}
-              name={items[0].price}
-              value={state.cart[items[0].price] || 0}
-              isDisabled={parseInt(items[0].price) > state.wallet}
-            />
-          </Card>
-        </div>
-        <div className="column is-4-fullhd is-6-tablet">
-          <Card
-            // id={index}
-            name={items[1].label}
-            price={items[1].price}
-            description={items[1].description}
-          >
-            <Input
-              handleInputChange={handleInputChange}
-              name={items[1].price}
-              value={state.cart[items[1].price] || 0}
-              isDisabled={parseInt(items[1].price) > state.wallet}
-            />
-          </Card>
-        </div>
+        {items.map((item, index) => (
+          <div className="column is-4-fullhd is-6-tablet" key={index}>
+            <Card
+              // id={index}
+              name={item.label}
+              price={item.price}
+              description={item.description}
+              imgUrl={item.imgurl}
+            >
+              <Input
+                handleInputChange={handleInputChange}
+                name={item.price}
+                value={state.cart[item.price] || 0}
+                isDisabled={parseInt(item.price) > state.wallet}
+              />
+            </Card>
+          </div>
+        ))}
       </div>
       <Link className="button my-1 is-primary is-large is-fullwidth" to="/cart">
         Tapos na ako magwaldas

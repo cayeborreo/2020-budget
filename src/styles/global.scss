@@ -22,8 +22,12 @@ button, a, .icon {
 }
 
 .is-shopping-card {
-  height: 14rem;
-  overflow-y: auto
+  height: 12.25rem;
+  overflow-y: auto;
+}
+
+.is-128x128 {
+  height: auto !important
 }
 
 .media-content {

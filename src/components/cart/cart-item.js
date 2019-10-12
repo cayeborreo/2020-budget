@@ -29,12 +29,12 @@ const CartItem = ({ name, price, quantity, imgUrl }) => {
           </figure>
           <div className="media-content">
             <div className="content">
-              <p className="is-size-3 has-text-weight-bold mb-1">
+              <p className="title is-3 is-4-mobile mb-1">
                 {name || "Item Name"}
               </p>
               <div className="columns my-0 py-0">
                 <div className="column py-0">
-                  <span className="tag is-success is-medium">
+                  <span className="tag is-success is-large">
                     ₱ {formatNumber(price || 0)}
                   </span>
                 </div>

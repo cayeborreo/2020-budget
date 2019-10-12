@@ -6,8 +6,6 @@ import PropTypes from "prop-types"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
 
-// import Icon from "./icon"
-
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
