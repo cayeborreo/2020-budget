@@ -1,20 +1,14 @@
-import React, { useContext } from "react"
+import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCheckCircle, faBullhorn } from "@fortawesome/free-solid-svg-icons"
+import { faBullhorn } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
-import PageHeader from "../components/layout/page-header"
-import { AppContext } from "../context/app-context"
 
 import Twitter from "../images/twitter-square-brands.svg"
 import Facebook from "../images/facebook-square-brands.svg"
-import { getCartIds, generateRandomIndex } from "../components/services/util"
-import productList from "../components/shop/alternativeItems.json"
 
-const Complete = () => {
-  const [state] = useContext(AppContext)
-  const cart = state.cart
+const Share = () => {
   const url = `https://2020-budget.netlify.com/`
 
   const message = `I can buy you, your friends, and at least 3,000 Toyota Fortuners with the Presidential Budget. Ikaw, hanggang saan aabot ang 8.2 billion pesos mo?`
@@ -83,4 +77,4 @@ const Complete = () => {
   )
 }
 
-export default Complete
+export default Share
