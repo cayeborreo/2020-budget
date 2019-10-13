@@ -38,7 +38,7 @@ const Header = () => {
           <div className="columns is-mobile is-vcentered">
             <div className="column px-0">
               <div className="ml-1 has-text-weight-bold is-size-5">
-                <Link className="mr-2" to="/">
+                <Link className="mr-1" to="/">
                   <span className="icon">
                     <Img
                       fluid={icon}
@@ -48,7 +48,7 @@ const Header = () => {
                   </span>
                   Home
                 </Link>{" "}
-                <Link className="mr-2" to="/shop">
+                <Link className="mr-1" to="/shop">
                   Shop
                 </Link>
               </div>
@@ -56,9 +56,12 @@ const Header = () => {
 
             <div className="column is-narrow px-0">
               <div className="buttons">
-                <button className="button is-outlined is-inverted is-primary">
+                <Link
+                  className="button is-outlined is-inverted is-primary"
+                  to="/share"
+                >
                   Share
-                </button>
+                </Link>
                 <Link className="button is-primary mr-1" to="/cart">
                   <span className="icon">
                     <FontAwesomeIcon icon={faShoppingCart} />

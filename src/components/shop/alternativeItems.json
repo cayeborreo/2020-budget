@@ -30,9 +30,27 @@
     "price": 43990
   },
   {
+    "label": "Research Grant",
+    "description": "Para sa agham! Kaso baka ipa-justify sa 'yo 'to ni Cynthia Villar.",
+    "imgurl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    "price": 200000
+  },
+  {
+    "label": "Modern Jeepney",
+    "description": "Saan huhugutin ng jeepney drivers ang 2.2 million? Try natin dito.",
+    "imgurl": "https://www.bworldonline.com/wp-content/uploads/2017/05/mahindra-dyipko-01.jpg",
+    "price": 2200000
+  },
+  {
     "label": "Toyota Fortuner",
     "description": "Bilang mahirap mag-commute, bili ka na lang ng sarili mong private vehicle.",
     "imgurl": "https://images.unsplash.com/photo-1566367576585-051277d52997?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     "price": 2275000
+  },
+  {
+    "label": "Presidential Jet",
+    "description": "Private flying para kay Duterte and his military VIPs. Ang bongga, sis.",
+    "imgurl": "https://images.unsplash.com/photo-1496176744020-6fa84b9bbf15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1381&q=80",
+    "price": 2000000000
   }
 ]

@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons"
+import { faCheckCircle, faBullhorn } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
@@ -17,26 +17,7 @@ const Complete = () => {
   const cart = state.cart
   const url = `https://2020-budget.netlify.com/`
 
-  const cartIds = getCartIds(cart)
-  let item, quantity
-
-  if (!!cartIds) {
-    // I want to pick a random item from the User's shopping cart
-    // and add it to the message User will share with their social media
-    const randomIndex = generateRandomIndex(cartIds.length)
-
-    const sampleItem = productList.filter(
-      product => product.price === parseInt(cartIds[randomIndex])
-    )[0]
-
-    quantity = cart[sampleItem.price]
-    item = quantity > 1 ? `${sampleItem.label}'s` : sampleItem.label
-  } else {
-    item = "Toyota Fortuners"
-    quantity = "3,000"
-  }
-
-  const message = `I can buy you, your friends, and at least ${quantity} ${item} with the Presidential Budget. Ikaw, hanggang saan aabot ang 8.2 billion pesos mo?`
+  const message = `I can buy you, your friends, and at least 3,000 Toyota Fortuners with the Presidential Budget. Ikaw, hanggang saan aabot ang 8.2 billion pesos mo?`
   const encodedMessage = encodeURIComponent(message)
 
   // Twitter stuff
@@ -48,22 +29,19 @@ const Complete = () => {
 
   return (
     <Layout>
-      <SEO title="Success" />
-      <PageHeader backRoute="/cart" pageTitle="Success!" />
+      <SEO title="Share" />
+      {/* <PageHeader backRoute="/cart" pageTitle="Success!" /> */}
       <center>
         <FontAwesomeIcon
-          icon={faCheckCircle}
+          icon={faBullhorn}
           size="6x"
-          className="mb-2 has-text-success"
+          className="my-2 has-text-purple"
+          style={{ transform: "rotate(-30deg)" }}
         />
         <p className="is-size-1 is-size-4-mobile has-text-grey">
-          <b>Congrashumaleyshons.</b>
+          <b>Share on social media!</b>
         </p>
-        <p className="is-size-5 has-text-grey">
-          Go forth at ipagmayabang ang shopping powers mo.
-        </p>
-
-        <article className="message has-text-left is-small-mobile my-3">
+        <article className="message has-text-left is-small-mobile my-2">
           <div className="message-body">
             {message}{" "}
             <span className="has-text-purple">#PresidentialShoppingSpree</span>
@@ -79,7 +57,7 @@ const Complete = () => {
           <span className="icon mr-1">
             <img src={Twitter} className="has-text-white" alt="Twitter" />
           </span>
-          Tweet my haul
+          Tweet
         </a>
         <div
           className="fb-share-button"
@@ -97,7 +75,7 @@ const Complete = () => {
             <span className="icon mr-1">
               <img src={Facebook} className="has-text-white" alt="Facebook" />
             </span>
-            Share my haul
+            Share
           </a>
         </div>
       </center>

@@ -11,7 +11,7 @@ import productList from "../components/shop/alternativeItems.json"
 import PageHeader from "../components/layout/page-header"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMoneyBill } from "@fortawesome/free-solid-svg-icons"
-import { formatNumber } from "../components/services/util"
+import { formatNumber, getCartIds } from "../components/services/util"
 
 const Cart = () => {
   const [state] = useContext(AppContext)
@@ -48,10 +48,7 @@ const Cart = () => {
   )
 
   const mapCartItems = () => {
-    // Sometimes keys (price/id) have 0 as value (quantity); need to filter those out
-    const filteredCart = Object.keys(state.cart).filter(
-      item => state.cart[item] > 0
-    )
+    const filteredCart = getCartIds(state.cart)
 
     if (filteredCart.length > 0) {
       let cartItems = []

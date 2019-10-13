@@ -30,9 +30,7 @@ const Layout = ({ children, showMoneyCounter }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main
-        className={classNames("my-2 mx-1", { "mb-5 pb-5": !!showMoneyCounter })}
-      >
+      <main className={classNames("m-1", { "mb-5 pb-5": !!showMoneyCounter })}>
         <Container>{children}</Container>
       </main>
 
