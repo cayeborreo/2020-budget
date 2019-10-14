@@ -6,10 +6,28 @@
     "price": 170
   },
   {
+    "label": "GrabCar Ride: Taguig to QC",
+    "description": "At 1PM. On a weekday. Putangina, kailan pa 'to ganito kamahal? #NoToMonopoly",
+    "imgurl": "https://business.mb.com.ph/wp-content/uploads/2017/03/1200x800.jpg",
+    "price": 800
+  },
+  {
+    "label": "Van Gogh Alive Ticket",
+    "description": "'Di mo na kailangang pumunta ng New York, Paris or Amsterdam to see his works.",
+    "imgurl": "https://images.summitmedia-digital.com/cosmo/images/2019/10/01/van-gogh-alive-exhibit-manila-1569936661.png",
+    "price": 750
+  },
+  {
     "label": "Adidas Stan Smith",
-    "description": "White na mukhang malinis at pure. (99% of PH politicians can't relate.)",
+    "description": "'Yung ikina-itim ng budhi ng mga pulitiko natin, ikina-puti naman ng sapatos na 'to.",
     "imgurl": "https://images.unsplash.com/photo-1544441892-794166f1e3be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     "price": 4800
+  },
+  {
+    "label": "CRJ Dedicated Tour Ticket",
+    "description": "#shamelessplug (Beke nemen 😭 VVIP lang okay na sa 'kin.)",
+    "imgurl": "https://www.ticketnet.com.ph/files/events/poster/b5c070ab-1c60-4d12-b29a-0daee1d99cab/Event%20Page_600x454.jpg",
+    "price": 5250
   },
   {
     "label": "Trip to Singapore",
@@ -30,6 +48,12 @@
     "price": 43990
   },
   {
+    "label": "Cartier Diamond Ring",
+    "description": "A woman's best friend daw. White gold at diamond, PAK.",
+    "imgurl": "https://images.unsplash.com/photo-1514612497953-05d1e5e171fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "price": 240000
+  },
+  {
     "label": "Research Grant",
     "description": "Para sa agham! Kaso baka ipa-justify sa 'yo 'to ni Cynthia Villar.",
     "imgurl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
@@ -43,9 +67,21 @@
   },
   {
     "label": "Toyota Fortuner",
-    "description": "Bilang mahirap mag-commute, bili ka na lang ng sarili mong private vehicle.",
+    "description": "Bilang mahirap mag-commute, bili ka na lang ng sarili mong private vehicle...",
     "imgurl": "https://images.unsplash.com/photo-1566367576585-051277d52997?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     "price": 2275000
+  },
+  {
+    "label": "1-Bedroom Condo Unit",
+    "description": "...or even better, tumira ka na lang malapit sa workplace mo. Millennials can only imagine.",
+    "imgurl": "https://images.unsplash.com/photo-1539693010221-cd218dfe6565?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    "price": 7000000
+  },
+  {
+    "label": "House and Lot in Tagaytay",
+    "description": "Siguro nasa 450 square meters mabibili nito, pwedeng 5 bedrooms. Pak.",
+    "imgurl": "https://images.unsplash.com/photo-1563148760-64687068abdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    "price": 18000000
   },
   {
     "label": "Presidential Jet",
