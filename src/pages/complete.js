@@ -20,7 +20,7 @@ const Complete = () => {
   const cartIds = getCartIds(cart)
   let item, quantity
 
-  if (!!cartIds) {
+  if (cartIds.length > 0) {
     // I want to pick a random item from the User's shopping cart
     // and add it to the message User will share with their social media
     const randomIndex = generateRandomIndex(cartIds.length)
@@ -32,8 +32,8 @@ const Complete = () => {
     quantity = cart[sampleItem.price]
     item = quantity > 1 ? `${sampleItem.label}'s` : sampleItem.label
   } else {
-    item = "Toyota Fortuners"
     quantity = "3,000"
+    item = "Toyota Fortuners"
   }
 
   const message = `I can buy you, your friends, and at least ${quantity} ${item} with the Presidential Budget. Ikaw, hanggang saan aabot ang 8.2 billion pesos mo?`
