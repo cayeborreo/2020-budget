@@ -34,8 +34,8 @@ const Layout = ({ children, showMoneyCounter }) => {
         className={classNames("m-1", {
           "mb-5 pb-5": !!showMoneyCounter,
         })}
-        data-aos="fade-up"
-        data-aos-delay={100}
+        // data-aos="fade-up"
+        // data-aos-delay={100}
       >
         <Container>{children}</Container>
       </main>
