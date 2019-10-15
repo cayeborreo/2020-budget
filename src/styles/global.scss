@@ -1,9 +1,12 @@
 @charset "utf-8";
 @import "~bulma";
 @import "./__variables.scss";
+@import "~aos/src/sass/aos.scss";
+
 
 body, html, div, p, span {
-  cursor: default
+  cursor: default;
+  scroll-behavior: smooth;
 }
 
 nav {

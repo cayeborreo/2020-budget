@@ -30,7 +30,13 @@ const Layout = ({ children, showMoneyCounter }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main className={classNames("m-1", { "mb-5 pb-5": !!showMoneyCounter })}>
+      <main
+        className={classNames("m-1", {
+          "mb-5 pb-5": !!showMoneyCounter,
+        })}
+        data-aos="fade-up"
+        data-aos-delay={100}
+      >
         <Container>{children}</Container>
       </main>
 
@@ -38,12 +44,12 @@ const Layout = ({ children, showMoneyCounter }) => {
         <div
           className={classNames("hero has-text-centered", {
             "is-success": !!state.wallet,
-            "is-danger": state.wallet <= 0,
+            "is-danger": state.wallet < 170,
           })}
           style={{ position: "fixed", bottom: 0, width: "100%" }}
         >
           <div className="hero-body p-1">
-            {state.wallet <= 0 ? (
+            {state.wallet < 170 ? (
               <Fragment>
                 {/* <p>Meron ka pang natitirang:</p> */}
                 <h1 className="title is-size-1 is-size-2-mobile">

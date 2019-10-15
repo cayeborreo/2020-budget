@@ -95,7 +95,6 @@ const Shop = () => {
         {items.map((item, index) => (
           <div className="column is-4-fullhd is-6-tablet" key={index}>
             <Card
-              // id={index}
               name={item.label}
               price={item.price}
               description={item.description}
