@@ -1,13 +1,14 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { AppContext } from "../context/app-context"
+import { Link } from "gatsby"
+import AOS from "aos"
 
 // import { useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/layout/layout"
 import items from "../components/shop/alternativeItems.json"
+import Layout from "../components/layout/layout"
 import Card from "../components/shop/card"
 import Input from "../components/shop/input"
 import SEO from "../components/layout/seo"
-import { Link } from "gatsby"
 import PageHeader from "../components/layout/page-header"
 
 const Shop = () => {
@@ -93,7 +94,11 @@ const Shop = () => {
       />
       <div className="columns is-multiline">
         {items.map((item, index) => (
-          <div className="column is-4-fullhd is-6-tablet" key={index}>
+          <div
+            className="column is-4-fullhd is-6-tablet"
+            key={index}
+            data-aos="fade-up"
+          >
             <Card
               // id={index}
               name={item.label}

@@ -5,10 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useContext, Fragment } from "react"
+import React, { useContext, useEffect, Fragment } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import AOS from "aos"
 import classNames from "classnames"
+
+import "aos/dist/aos.css"
 
 import Header from "./header"
 import Container from "./container"
@@ -27,6 +30,15 @@ const Layout = ({ children, showMoneyCounter }) => {
   `)
 
   const [state] = useContext(AppContext)
+
+  useEffect(() => {
+    AOS.init({
+      delay: 200,
+      once: true,
+      offset: 300,
+    })
+  }, [])
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />

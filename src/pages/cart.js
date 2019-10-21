@@ -1,5 +1,6 @@
-import React, { useContext, Fragment } from "react"
+import React, { useContext, useEffect, Fragment } from "react"
 import { Link } from "gatsby"
+import AOS from "aos"
 
 import { AppContext } from "../context/app-context"
 import Layout from "../components/layout/layout"
@@ -18,7 +19,7 @@ const Cart = () => {
 
   const RenderCartItems = ({ cartItems }) => (
     <Fragment>
-      <center>
+      <center data-aos="fade-up">
         {cartItems.map((item, index) => (
           <CartItem
             key={index}
