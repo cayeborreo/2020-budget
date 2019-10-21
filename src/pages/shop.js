@@ -94,11 +94,7 @@ const Shop = () => {
       />
       <div className="columns is-multiline">
         {items.map((item, index) => (
-          <div
-            className="column is-4-fullhd is-6-tablet"
-            key={index}
-            data-aos="fade-up"
-          >
+          <div className="column is-4-fullhd is-6-tablet" key={index}>
             <Card
               name={item.label}
               price={item.price}

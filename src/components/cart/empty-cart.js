@@ -1,6 +1,7 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMeh } from "@fortawesome/free-solid-svg-icons"
+import { Link } from "gatsby"
 
 const EmptyCart = () => (
   <center>
@@ -13,6 +14,10 @@ const EmptyCart = () => (
       <br />
       ’Wag ka na mahiya.
     </p>
+
+    <Link to="/shop" className="button is-fullwidth is-large mt-3 is-primary">
+      Back to shopping
+    </Link>
   </center>
 )
 
