@@ -100,7 +100,6 @@ const Shop = () => {
             data-aos="fade-up"
           >
             <Card
-              // id={index}
               name={item.label}
               price={item.price}
               description={item.description}

@@ -42,16 +42,22 @@
     "price": 43990
   },
   {
-    "label": "Cartier Diamond Ring",
-    "description": "A woman's best friend daw. Sana for gays din, 'no? #MarriageRightsForAll",
-    "imgurl": "https://images.unsplash.com/photo-1514612497953-05d1e5e171fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "price": 240000
+    "label": "15-inch MacBook Pro",
+    "description": "Grabe this model. Sis. As powerful as China over our islands sksksk",
+    "imgurl": "https://images.unsplash.com/photo-1551533390-b80b6ffa7816?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+    "price": 141990
   },
   {
     "label": "Research Grant",
     "description": "Para sa agham! Kaso baka ipa-justify sa 'yo 'to ni Cynthia Villar.",
     "imgurl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     "price": 200000
+  },
+  {
+    "label": "Cartier Diamond Ring",
+    "description": "A woman's best friend daw. Sana for gays din, 'no? #MarriageRightsForAll",
+    "imgurl": "https://images.unsplash.com/photo-1514612497953-05d1e5e171fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "price": 240000
   },
   {
     "label": "Modern Jeepney",

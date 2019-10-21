@@ -1,6 +1,5 @@
 import React from "react"
 import classNames from "classnames"
-
 import { formatNumber } from "../services/util"
 
 const Card = ({ name, price, imgUrl, description, isDisabled, children }) => {
