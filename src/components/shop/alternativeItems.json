@@ -1,5 +1,17 @@
 [
   {
+    "label": "Libreng Bakuna vs Polio",
+    "description": "Punta na sa malapit na health center at pabakunahan ang mga bagets.",
+    "imgurl": "https://cdn.pixabay.com/photo/2016/02/22/11/20/vaccination-1215279_960_720.jpg",
+    "price": 0
+  },
+  {
+    "label": "Kilo ng Palay",
+    "description": "'Yan ang benta ng farmers natin, with ₱12/kilo production cost. Ux2moyon?",
+    "imgurl": "https://images.unsplash.com/photo-1522780300892-b25a6ec89734?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=733&q=80",
+    "price": 16
+  },
+  {
     "label": "Starbucks Frappe",
     "description": "25% sugar kasi mahirap na, mahal magpagamot ng dyabetis sa Pinas.",
     "imgurl": "https://images.unsplash.com/photo-1522036150865-e4ee8b0c2695?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
@@ -12,32 +24,8 @@
     "price": 750
   },
   {
-    "label": "GrabCar Ride: Taguig to QC",
-    "description": "At 1PM. On a weekday. Putangina, kailan pa 'to ganito kamahal? #NoToMonopoly",
-    "imgurl": "https://business.mb.com.ph/wp-content/uploads/2017/03/1200x800.jpg",
-    "price": 800
-  },
-  {
-    "label": "Adidas Stan Smith",
-    "description": "'Yung ikina-itim ng budhi ng mga pulitiko natin, ikina-puti naman ng sapatos na 'to.",
-    "imgurl": "https://images.unsplash.com/photo-1544441892-794166f1e3be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    "price": 4800
-  },
-  {
-    "label": "CRJ Dedicated Tour Ticket",
-    "description": "#shamelessplug (Beke nemen 😭 VVIP lang okay na sa 'kin.)",
-    "imgurl": "https://www.ticketnet.com.ph/files/events/poster/b5c070ab-1c60-4d12-b29a-0daee1d99cab/Event%20Page_600x454.jpg",
-    "price": 5250
-  },
-  {
-    "label": "Trip to Singapore",
-    "description": "3D2N rate per person, Universal Studious tour included. *wink*",
-    "imgurl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
-    "price": 8000
-  },
-  {
     "label": "Nintendo Switch",
-    "description": "Para ma-experience mo ang tunay na highway speed, kahit sa Mario Kart lang.",
+    "description": "Para ma-experience mo ang tunay na highway speed, kahit Mario Kart lang.",
     "imgurl": "https://images.unsplash.com/photo-1560278687-2941249fd3d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
     "price": 15000
   },
@@ -85,7 +73,7 @@
   },
   {
     "label": "1-Bedroom Condo Unit",
-    "description": "...or even better, tumira ka na lang malapit sa workplace mo. Millennials can only imagine.",
+    "description": "...or even better, tumira ka na lang malapit sa workplace mo. (Millennials can only imagine.)",
     "imgurl": "https://images.unsplash.com/photo-1539693010221-cd218dfe6565?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     "price": 7000000
   },
@@ -94,6 +82,12 @@
     "description": "Stressed sa gobyerno natin? Palamig ka muna sa 5-BR house mo sa Tagaytay.",
     "imgurl": "https://images.unsplash.com/photo-1563148760-64687068abdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     "price": 18000000
+  },
+  {
+    "label": "Ninja Cop Bribe",
+    "description": "Nahulihan ng mahigit 100kg ng shabu? Don't worry, 50 million will set you free.",
+    "imgurl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    "price": 50000000
   },
   {
     "label": "Presidential Jet",

@@ -1,6 +1,7 @@
-import React, { useContext } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons"
+import React, { useContext, useEffect } from "react"
+import AOS from "aos"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faCheckCircle } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
@@ -9,8 +10,13 @@ import { AppContext } from "../context/app-context"
 
 import Twitter from "../images/twitter-square-brands.svg"
 import Facebook from "../images/facebook-square-brands.svg"
-import { getCartIds, generateRandomIndex } from "../components/services/util"
+import {
+  getCartIds,
+  generateRandomIndex,
+  formatNumber,
+} from "../components/services/util"
 import productList from "../components/shop/alternativeItems.json"
+import Container from "../components/layout/container"
 
 const Complete = () => {
   const [state] = useContext(AppContext)
@@ -18,7 +24,7 @@ const Complete = () => {
   const url = `https://2020-budget.netlify.com/`
 
   const cartIds = getCartIds(cart)
-  let item, quantity
+  let item, quantity, imgurl
 
   if (cartIds.length > 0) {
     // I want to pick a random item from the User's shopping cart
@@ -29,11 +35,14 @@ const Complete = () => {
       product => product.price === parseInt(cartIds[randomIndex])
     )[0]
 
-    quantity = cart[sampleItem.price]
-    item = quantity > 1 ? `${sampleItem.label}'s` : sampleItem.label
+    quantity = formatNumber(cart[sampleItem.price])
+    item = parseInt(quantity) > 1 ? `${sampleItem.label}'s` : sampleItem.label
+    imgurl = sampleItem.imgurl
   } else {
     quantity = "3,000"
     item = "Toyota Fortuners"
+    imgurl =
+      "https://images.unsplash.com/photo-1566367576585-051277d52997?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
   }
 
   const message = `I can buy you, your friends, and at least ${quantity} ${item} with the Presidential Budget. Ikaw, hanggang saan aabot ang 8.2 billion pesos mo?`
@@ -50,25 +59,37 @@ const Complete = () => {
     <Layout>
       <SEO title="Success" />
       <PageHeader backRoute="/cart" pageTitle="Success!" />
-      <center>
-        <FontAwesomeIcon
-          icon={faCheckCircle}
-          size="6x"
-          className="mb-2 has-text-success"
-        />
+      <center data-aos="fade-up">
         <p className="is-size-1 is-size-4-mobile has-text-grey">
           <b>Congrashumaleyshons.</b>
         </p>
         <p className="is-size-5 has-text-grey">
           Go forth at ipagmayabang ang shopping powers mo.
         </p>
-
-        <article className="message has-text-left is-small-mobile my-3">
-          <div className="message-body">
-            {message}{" "}
-            <span className="has-text-purple">#PresidentialShoppingSpree</span>
+        <div className="columns mt-2">
+          <div className="column">
+            <figure className="image is-4by3">
+              <img src={imgurl} alt={item} />
+            </figure>
           </div>
-        </article>
+
+          <div className="column">
+            <article className="message has-text-left is-medium mb-1">
+              <div className="message-body">
+                {message}{" "}
+                <span className="has-text-purple">
+                  <a
+                    href="https://twitter.com/hashtag/PresidentialShoppingSpree"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    #PresidentialShoppingSpree
+                  </a>
+                </span>
+              </div>
+            </article>
+          </div>
+        </div>
 
         <a
           className="button mb-1 is-info is-fullwidth is-medium"
