@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, Fragment } from "react"
+import React, { useContext, Fragment } from "react"
 import { Link } from "gatsby"
-import AOS from "aos"
 
 import { AppContext } from "../context/app-context"
 import Layout from "../components/layout/layout"

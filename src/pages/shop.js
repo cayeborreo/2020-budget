@@ -1,7 +1,6 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext } from "react"
 import { AppContext } from "../context/app-context"
 import { Link } from "gatsby"
-import AOS from "aos"
 
 // import { useStaticQuery, graphql } from "gatsby"
 import items from "../components/shop/alternativeItems.json"

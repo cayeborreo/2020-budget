@@ -17,7 +17,7 @@ const Card = ({ name, price, imgUrl, description, isDisabled, children }) => {
                 ? imgUrl
                 : "https://bulma.io/images/placeholders/1280x960.png"
             }
-            alt="Placeholder"
+            alt={name}
           />
         </figure>
       </div>

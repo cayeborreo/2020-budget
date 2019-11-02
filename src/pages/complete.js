@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from "react"
-import AOS from "aos"
+import React, { useContext } from "react"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // import { faCheckCircle } from "@fortawesome/free-solid-svg-icons"
 
@@ -16,7 +15,6 @@ import {
   formatNumber,
 } from "../components/services/util"
 import productList from "../components/shop/alternativeItems.json"
-import Container from "../components/layout/container"
 
 const Complete = () => {
   const [state] = useContext(AppContext)
