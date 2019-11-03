@@ -11,8 +11,6 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import AOS from "aos"
 import classNames from "classnames"
 
-import "aos/dist/aos.css"
-
 import Header from "./header"
 import Container from "./container"
 import { AppContext } from "../../context/app-context"

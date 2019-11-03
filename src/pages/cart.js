@@ -11,10 +11,14 @@ import productList from "../components/shop/alternativeItems.json"
 import PageHeader from "../components/layout/page-header"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMoneyBill } from "@fortawesome/free-solid-svg-icons"
-import { formatNumber, getCartIds } from "../components/services/util"
+import {
+  formatNumber,
+  getCartIds,
+  computeWallet,
+} from "../components/services/util"
 
 const Cart = () => {
-  const [state] = useContext(AppContext)
+  const [state, setState] = useContext(AppContext)
 
   const RenderCartItems = ({ cartItems }) => (
     <Fragment>
@@ -44,6 +48,12 @@ const Cart = () => {
       >
         Finish shopping
       </Link>
+      <button
+        className="button is-danger is-outlined is-medium is-fullwidth mt-1"
+        onClick={() => setState({ cart: {}, wallet: computeWallet({}) })}
+      >
+        Wait, I need a reset
+      </button>
     </Fragment>
   )
 

@@ -24,16 +24,16 @@
     "price": 170
   },
   {
+    "label": "Happy Hour Beer Bucket",
+    "description": "Dazerb ng mga nakakatiis pang mabuhay sa Pilipinas. O sa mga uhaw lang talaga.",
+    "imgurl": "https://extras.mnginteractive.com/live/media/site32/2018/0513/20180513_022009_Beer.jpg",
+    "price": 450
+  },
+  {
     "label": "Van Gogh Alive Ticket",
     "description": "'Di mo na kailangang pumunta ng New York, Paris or Amsterdam to see his works.",
     "imgurl": "https://images.summitmedia-digital.com/cosmo/images/2019/10/01/van-gogh-alive-exhibit-manila-1569936661.png",
     "price": 750
-  },
-  {
-    "label": "Happy Hour Beer Bucket",
-    "description": "Dazerb ng mga nakakatiis pang mabuhay sa Pilipinas. O sa mga uhaw lang talaga.",
-    "imgurl": "http://extras.mnginteractive.com/live/media/site32/2018/0513/20180513_022009_Beer.jpg",
-    "price": 450
   },
   {
     "label": "Nintendo Switch",

@@ -4,7 +4,11 @@ import Img from "gatsby-image"
 import PropTypes from "prop-types"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
+import {
+  faShoppingCart,
+  faShareAlt,
+  faCommentDots,
+} from "@fortawesome/free-solid-svg-icons"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -60,7 +64,17 @@ const Header = () => {
                   className="button is-outlined is-inverted is-primary"
                   to="/share"
                 >
-                  Share
+                  <span className="icon">
+                    <FontAwesomeIcon icon={faShareAlt} />
+                  </span>
+                </Link>
+                <Link
+                  className="button is-outlined is-inverted is-primary"
+                  to="/contribute"
+                >
+                  <span className="icon">
+                    <FontAwesomeIcon icon={faCommentDots} />
+                  </span>
                 </Link>
                 <Link className="button is-primary mr-1" to="/cart">
                   <span className="icon">

@@ -22,3 +22,17 @@ export const generateRandomIndex = max => {
 
   return index
 }
+
+export const computeWallet = currentCart => {
+  // Compute for total
+  let prices = Object.keys(currentCart)
+  let total = prices.reduce((accumulator, currentValue) => {
+    return (
+      parseInt(accumulator) +
+      parseInt(currentValue) * parseInt(currentCart[currentValue])
+    )
+  }, 0)
+
+  // Return current wallet value
+  return 8200000000 - parseInt(total)
+}
