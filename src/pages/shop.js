@@ -3,6 +3,8 @@ import { AppContext } from "../context/app-context"
 import { Link } from "gatsby"
 
 // import { useStaticQuery, graphql } from "gatsby"
+import { computeWallet } from "../components/services/util"
+
 import items from "../components/shop/alternativeItems.json"
 import Layout from "../components/layout/layout"
 import Card from "../components/shop/card"
@@ -69,21 +71,6 @@ const Shop = () => {
     }
   }
 
-  // Reusable function that will compute the value of the wallet based on the given cart
-  const computeWallet = currentCart => {
-    // Compute for total
-    let prices = Object.keys(currentCart)
-    let total = prices.reduce((accumulator, currentValue) => {
-      return (
-        parseInt(accumulator) +
-        parseInt(currentValue) * parseInt(currentCart[currentValue])
-      )
-    }, 0)
-
-    // Return current wallet value
-    return 8200000000 - parseInt(total)
-  }
-
   return (
     <Layout showMoneyCounter>
       <SEO title="Shop" />
@@ -115,10 +102,10 @@ const Shop = () => {
         Tapos na ako magwaldas
       </Link>
       <button
-        className="button is-light is-medium is-fullwidth"
+        className="button is-danger is-outlined is-medium is-fullwidth mt-1"
         onClick={() => setState({ cart: {}, wallet: computeWallet({}) })}
       >
-        Wait, I need a&nbsp;<span className="has-text-danger">reset</span>
+        Wait, I need a reset
       </button>
     </Layout>
   )
