@@ -1,8 +1,17 @@
 import React from "react"
+import Img from "gatsby-image"
 import classNames from "classnames"
 import { formatNumber } from "../services/util"
 
-const Card = ({ name, price, imgUrl, description, isDisabled, children }) => {
+const Card = ({
+  name,
+  price,
+  imgUrl,
+  imgQuery,
+  description,
+  isDisabled,
+  children,
+}) => {
   return (
     <div
       className={classNames("card", {
@@ -10,16 +19,17 @@ const Card = ({ name, price, imgUrl, description, isDisabled, children }) => {
       })}
     >
       <div className="card-image">
-        <figure className="image is-4by3">
-          <img
+        {/* <figure className="image is-4by3"> */}
+        {/* <img
             src={
               !!imgUrl
                 ? imgUrl
                 : "https://bulma.io/images/placeholders/1280x960.png"
             }
             alt={name}
-          />
-        </figure>
+          /> */}
+        <Img fluid={imgQuery} />
+        {/* </figure> */}
       </div>
       <div className="card-content is-shopping-card">
         <div className="media mb-1">

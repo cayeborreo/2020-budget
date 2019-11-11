@@ -1,8 +1,8 @@
 import React, { useContext } from "react"
 import { AppContext } from "../context/app-context"
-import { Link } from "gatsby"
 
-// import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+// import Img from "gatsby-image"
 import { computeWallet } from "../components/services/util"
 
 import items from "../components/shop/alternativeItems.json"
@@ -11,6 +11,7 @@ import Card from "../components/shop/card"
 import Input from "../components/shop/input"
 import SEO from "../components/layout/seo"
 import PageHeader from "../components/layout/page-header"
+// import { shopImagesQuery } from "../components/services/shopQuery"
 
 const Shop = () => {
   // const data = useStaticQuery(graphql`
@@ -28,6 +29,150 @@ const Shop = () => {
 
   // const items = data.allGoogleSheetShoppingItemsRow.nodes
   // console.log(items)
+
+  const data = useStaticQuery(graphql`
+    query {
+      polioVax: file(relativePath: { eq: "shop/polioVax.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      palay: file(relativePath: { eq: "shop/palay.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      losartan: file(relativePath: { eq: "shop/losartan.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      starbucksFrappe: file(relativePath: { eq: "shop/starbucksFrappe.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      beerBucket: file(relativePath: { eq: "shop/beerBucket.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      vanGoghAlive: file(relativePath: { eq: "shop/vanGoghAlive.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      nintendoSwitch: file(relativePath: { eq: "shop/nintendoSwitch.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      nintendoSwitchGames: file(
+        relativePath: { eq: "shop/nintendoSwitchGames.jpeg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      iphoneX: file(relativePath: { eq: "shop/iphoneX.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      standardFuneralPackage: file(
+        relativePath: { eq: "shop/standardFuneralPackage.jpeg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      macbookPro: file(relativePath: { eq: "shop/macbookPro.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      researchGrant: file(relativePath: { eq: "shop/researchGrant.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cartierDiamondRing: file(
+        relativePath: { eq: "shop/cartierDiamondRing.jpeg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      modernJeepney: file(relativePath: { eq: "shop/modernJeepney.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      toyotaFortuner: file(relativePath: { eq: "shop/toyotaFortuner.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      condoUnit: file(relativePath: { eq: "shop/condoUnit.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      houseAndLot: file(relativePath: { eq: "shop/houseAndLot.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      ninjaCopBribe: file(relativePath: { eq: "shop/ninjaCopBribe.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      presidentialJet: file(relativePath: { eq: "shop/presidentialJet.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
   const [state, setState] = useContext(AppContext)
 
@@ -87,6 +232,7 @@ const Shop = () => {
               description={item.description}
               imgUrl={item.imgurl}
               isDisabled={parseInt(item.price) > state.wallet}
+              imgQuery={data[item.filename].childImageSharp.fluid}
             >
               <Input
                 handleInputChange={handleInputChange}
