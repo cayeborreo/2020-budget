@@ -52,6 +52,10 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `https://raw.githubusercontent.com/cayeborreo/2020-budget/master/img/sideEye.png`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
