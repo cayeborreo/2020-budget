@@ -71,7 +71,7 @@
   },
   {
     "label": "15-inch MacBook Pro",
-    "description": "Grabe this model. Sis. As powerful as China over our islands sksksk",
+    "description": "Powerful model. Windows XP computers in government offices could NEVER.",
     "imgurl": "https://images.unsplash.com/photo-1551533390-b80b6ffa7816?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     "price": 141990,
     "filename": "macbookPro"
@@ -126,8 +126,22 @@
     "filename": "ninjaCopBribe"
   },
   {
+    "label": "Kalderong Ginto (ang Presyo)",
+    "description": "Buti sana kung lutuan 'to ng ipapang-boodle fight, kaso hindi eh.",
+    "imgurl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    "price": 50000000,
+    "filename": "kaldero"
+  },
+  {
+    "label": "SEA Games Marketing Budget",
+    "description": "Uhh.. Chinese garter-inspired logo? Parang nagkalat lang na goma, swiss.",
+    "imgurl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    "price": 360000000,
+    "filename": "seagamesLogo"
+  },
+  {
     "label": "Presidential Jet",
-    "description": "Private flying para kay Duterte and his military VIPs. Ang bongga, sis.",
+    "description": "Private flying para kay Duterte and his military VIPs. PH traffic WHO?",
     "imgurl": "https://images.unsplash.com/photo-1496176744020-6fa84b9bbf15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1381&q=80",
     "price": 2000000000,
     "filename": "presidentialJet"

@@ -157,7 +157,21 @@ const Shop = () => {
           }
         }
       }
+      kaldero: file(relativePath: { eq: "shop/kaldero.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       ninjaCopBribe: file(relativePath: { eq: "shop/ninjaCopBribe.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      seagamesLogo: file(relativePath: { eq: "shop/seagamesLogo.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
