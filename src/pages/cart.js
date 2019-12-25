@@ -33,15 +33,17 @@ const Cart = () => {
           />
         ))}
       </center>
-      <div className="content mt-2 is-medium">
-        May sukli ka pang:
-        <div className="has-text-success">
-          <FontAwesomeIcon icon={faMoneyBill} />
-          <b className="ml-1 has-text-dark is-size-3-tablet">
-            {formatNumber(state.wallet)}
-          </b>
+      {state.wallet > 0 &&
+        <div className="content mt-2 is-medium">
+          May sukli ka pang:
+          <div className="has-text-success">
+            <FontAwesomeIcon icon={faMoneyBill} />
+            <b className="ml-1 has-text-dark is-size-3-tablet">
+              {formatNumber(state.wallet)}
+            </b>
+          </div>
         </div>
-      </div>
+      }
       <Link
         to="/complete"
         className="button is-success is-large is-fullwidth mt-3"
