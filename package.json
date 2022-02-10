@@ -22,7 +22,7 @@
     "gatsby-source-google-sheets": "^1.1.1",
     "gatsby-transformer-sharp": "^2.2.19",
     "graphql-tag": "^2.10.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
